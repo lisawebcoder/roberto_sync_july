@@ -1,0 +1,21 @@
+[
+    {
+        "database": "csdatabasejune",        
+        "nodes": {
+            "table": "BookingReason",
+            "columns": [                
+                "description"
+            ],
+            "children": [
+                {
+                    "table": "MaskedPhoneNumber",
+                    "columns": [
+                        "formattedPhoneNumber"
+                    ]
+                }
+            ]
+        }
+    }
+]
+
+

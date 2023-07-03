@@ -1,0 +1,142 @@
+[
+  {
+    "database": "csdatabase",
+    "index": "csdatabase",
+    "nodes": {
+      "table": "Unit",
+      "schema": "public",
+      "columns": [
+        {
+          "name": "unitID",
+          "type": "uuid"
+        },
+        {
+          "name": "sizeCategoryID",
+          "type": "smallint"
+        },
+        {
+          "name": "covered",
+          "type": "boolean"
+        },
+        {
+          "name": "carAccess",
+          "type": "boolean"
+        },
+        {
+          "name": "heating",
+          "type": "boolean"
+        },
+        {
+          "name": "heatedFloor",
+          "type": "boolean"
+        },
+        {
+          "name": "airConditioning",
+          "type": "boolean"
+        },
+        {
+          "name": "noStairs",
+          "type": "boolean"
+        },
+        {
+          "name": "electronicKey",
+          "type": "boolean"
+        },
+        {
+          "name": "h24",
+          "type": "boolean"
+        },
+        {
+          "name": "electricity",
+          "type": "boolean"
+        },
+        {
+          "name": "width",
+          "type": "numeric(10,2)"
+        },
+        {
+          "name": "length",
+          "type": "numeric(10,2)"
+        },
+        {
+          "name": "floorNb",
+          "type": "smallint"
+        },
+        {
+          "name": "narrowestPassage",
+          "type": "numeric(10,2)"
+        },
+        {
+          "name": "regularPrice",
+          "type": "numeric(10,2)"
+        },
+        {
+          "name": "discountedPrice",
+          "type": "numeric(10,2)"
+        },
+        {
+          "name": "motorcycle",
+          "type": "boolean"
+        },
+        {
+          "name": "car",
+          "type": "boolean"
+        },
+        {
+          "name": "rv",
+          "type": "boolean"
+        },
+        {
+          "name": "boat",
+          "type": "boolean"
+        },
+        {
+          "name": "facilityTypeID",
+          "type": "uuid"
+        },
+        {
+          "name": "rentalDeposit",
+          "type": "smallint"
+        }
+      ],
+      "filters": [
+        {
+          "column": "visible",
+          "condition": "IS TRUE"
+        },
+        {
+          "column": "available",
+          "condition": "IS TRUE"
+        }
+      ],
+      "order_by": [
+        "covered",
+        "carAccess",
+        "heating",
+        "heatedFloor",
+        "airConditioning",
+        "noStairs",
+        "electronicKey",
+        "h24",
+        "electricity",
+        "width",
+        "length",
+        "floorNb",
+        "narrowestPassage",
+        "motorcycle",
+        "car",
+        "rv",
+        "boat",
+        "facilityTypeID",
+        "accessCode",
+        "possiblyVehicle",
+        "outdoor",
+        "snowmobile",
+        "trailer",
+        "discountedPrice",
+        "regularPrice",
+        "rentalDeposit"
+      ]
+    }
+  }
+]

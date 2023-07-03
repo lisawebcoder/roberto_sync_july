@@ -1,0 +1,23 @@
+[
+  {
+    "database": "csdatabase",
+    "index": "csdatabase",
+    "nodes": {
+      "table": "Unit",
+      "schema": "public",
+      "columns": [
+        
+      ],
+      "uniqueItems": [
+        {
+          "column": "visible",
+          "condition": "IS TRUE"
+        },
+        {
+          "column": "available",
+          "condition": "IS TRUE"
+        }
+      ]
+    }
+  }
+]

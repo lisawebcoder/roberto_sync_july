@@ -1,0 +1,9 @@
+coverage:
+  status:
+    project:
+      default:
+        threshold: 70%
+
+codecov:
+  archive: 
+    uploads: false

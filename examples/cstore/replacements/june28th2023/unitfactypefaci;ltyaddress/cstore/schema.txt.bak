@@ -1,0 +1,72 @@
+[--1starraymain opens--
+    {--1stbracketmain opens--
+        "database": "csdatabase",
+        "index": "csdatabase",
+        "nodes": {--1stbracketnode opens--
+            "table": "Unit",
+            "schema": "public",
+            "columns": [
+            ],
+            "children": [--1starraychild opens--
+                {--1stbracketchild opens--
+                    "table": "FacilityType",
+                    "schema": "public",
+                    "columns": [
+                    ],                    
+                    "relationship": {
+                        "variant": "object",
+                        "type": "one_to_one",
+                        "foreign_key": {
+                            "child": ["facilityTypeID"],
+                            "parent": ["facilityTypeID"]
+                        }
+                    },
+                    "children":[--2ndarraychild opens--
+                        {--2ndbrackerchild--opens--
+                            "table": "Facility",
+                            "schema": "public",
+                            "relationship": {
+                                "variant": "object",
+                                "type": "one_to_one",
+                        "foreign_key": {
+                            "child": ["facilityID"],
+                            "parent": ["facilityID"]
+                                }
+                            },
+                            "children": [--3rdarraychild opens--
+                                {--3rdbracketchild opens--
+                                    "table": "city",
+                                    "schema": "public",
+                                    "relationship": {
+                                        "variant": "object",
+                                        "type": "one_to_one",
+									"foreign_key": {
+										"child": ["facilityID"],
+										"parent": ["facilityID"]
+											}
+                                    },
+                                    "children": [--4tharraychild opens--
+                                        {--4thbrcketchild opens--
+                                            "table": "country",
+                                            "schema": "public",
+                                            "relationship": {
+                                                "variant": "object",
+                                                "type": "one_to_one",
+										"foreign_key": {
+											"child": ["facilityID"],
+											"parent": ["facilityID"]
+												}
+                                            }
+                                        }--4thbrcketchild closes--not sure
+                                    ]--4tharraychild closes--notsure
+                                }--3rdbracketchild closes--not sure--
+                            ]--3rdarraychild closes--not sure--
+                         }--2ndbracketchild--closes--
+                        
+						
+                    ]--2ndarraychild closes--
+                }--1stbracketchild closes--
+            ]--1starraychild closes--
+        }--1stbracketnode closes--
+    }--1stbracketmain closes--
+]--1starraymain closes--

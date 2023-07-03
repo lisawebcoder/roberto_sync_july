@@ -1,0 +1,3448 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "primary",
+        "nbPages",
+        "nbFacilities"
+    ],
+    "properties": {
+        "primary": {
+            "type": "array",
+            "default": [],
+            "title": "The primary Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "id",
+                    "unit",
+                    "facility",
+                    "discounts"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "The id Schema",
+                        "examples": [
+                            "a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31",
+                            "7ec437f9-694a-4811-bbc7-73be300f53e5",
+                            "91966261-cc01-4d6e-9f24-cf8db9d36f1a",
+                            "391f66e4-e2f3-402b-9fcc-2b58e73292d8",
+                            "4b65e629-9064-4923-949f-b821006da5ca",
+                            "01cda2c2-bbfe-40b7-a4fb-7590d4e02efe",
+                            "d95ca4b9-e941-4a92-a002-8b3a745e14ea",
+                            "324cbac8-a1f8-403b-8c19-001de3c67447",
+                            "645a84dd-43bf-46f4-a0af-28d2fee2fbf6",
+                            "7136e99a-7aba-425b-b5e4-df4cba2cbc3e",
+                            "bea8953b-eda3-4bf3-bef8-1963433dbe4c"
+                        ]
+                    },
+                    "unit": {
+                        "type": "object",
+                        "title": "The unit Schema",
+                        "required": [
+                            "id",
+                            "width",
+                            "length",
+                            "vehicles",
+                            "storageType",
+                            "regularPrice",
+                            "specifications",
+                            "discountedPrice",
+                            "possiblyVehicle"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "The id Schema",
+                                "examples": [
+                                    "6664d28d-5f0c-4080-9bac-d268466d56bd",
+                                    "543203ec-5f2b-4ca8-8504-a3d8e867cdcb",
+                                    "3306aee1-037c-4929-81b8-296a288d3a8a",
+                                    "26dbe9fd-a933-4d4c-817e-753049820a21",
+                                    "35542a85-9b70-4fbe-a7c8-bc8f9a8c0d14",
+                                    "6405db4c-9fe7-499b-89a1-9355389a7375",
+                                    "573dbc29-e25b-41d6-94df-0e6549523b98",
+                                    "31155dfe-26ad-4747-82f2-41ed3dbe17c6",
+                                    "23c27be0-920a-4950-8465-2eee675b6788",
+                                    "3b56f883-3094-455c-88dc-bc6dfe60aa16",
+                                    "27f7ab18-3eae-45f6-8c12-cfaafb6232f4"
+                                ]
+                            },
+                            "width": {
+                                "type": "number",
+                                "title": "The width Schema",
+                                "examples": [
+                                    1.52,
+                                    1.83,
+                                    2.13,
+                                    3.05,
+                                    2.44,
+                                    1.22
+                                ]
+                            },
+                            "length": {
+                                "type": "number",
+                                "title": "The length Schema",
+                                "examples": [
+                                    3.05,
+                                    2.13,
+                                    5.03,
+                                    5.49,
+                                    1.83
+                                ]
+                            },
+                            "vehicles": {
+                                "type": "array",
+                                "title": "The vehicles Schema",
+                                "items": {
+                                    "type": "string",
+                                    "title": "A Schema",
+                                    "examples": [
+                                        "motorcycle",
+                                        "car",
+                                        "rv",
+                                        "boat"
+                                    ]
+                                },
+                                "examples": [
+                                    [],
+                                    [],
+                                    [],
+                                    [],
+                                    [],
+                                    [],
+                                    [],
+                                    ["motorcycle",
+                                        "car",
+                                        "rv",
+                                        "boat"
+                                    ],
+                                    ["motorcycle",
+                                        "car",
+                                        "rv",
+                                        "boat"
+                                    ],
+                                    [],
+                                    []
+                                ]
+                            },
+                            "storageType": {
+                                "type": "string",
+                                "title": "The storageType Schema",
+                                "examples": [
+                                    "selfStorage",
+                                    "parking"
+                                ]
+                            },
+                            "regularPrice": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "title": "The regularPrice Schema",
+                                "examples": [
+                                    117,
+                                    null
+                                ]
+                            },
+                            "specifications": {
+                                "type": "array",
+                                "title": "The specifications Schema",
+                                "items": {
+                                    "type": "string",
+                                    "title": "A Schema",
+                                    "examples": [
+                                        "covered",
+                                        "heating",
+                                        "electronicKey",
+                                        "h24",
+                                        "noStairs",
+                                        "carAccess",
+                                        "outdoor",
+                                        "electricity",
+                                        "airConditioning",
+                                        "notCovered"
+                                    ]
+                                },
+                                "examples": [
+                                    [
+                                        "covered"],
+                                    ["heating",
+                                        "electronicKey",
+                                        "h24",
+                                        "covered"
+                                    ],
+                                    ["heating",
+                                        "noStairs",
+                                        "carAccess",
+                                        "electronicKey",
+                                        "h24",
+                                        "covered",
+                                        "outdoor",
+                                        "electricity"
+                                    ],
+                                    ["heating",
+                                        "electronicKey",
+                                        "h24",
+                                        "covered"
+                                    ],
+                                    ["h24",
+                                        "covered"
+                                    ],
+                                    ["heating",
+                                        "airConditioning",
+                                        "electronicKey",
+                                        "covered"
+                                    ],
+                                    ["heating",
+                                        "noStairs",
+                                        "electronicKey",
+                                        "h24",
+                                        "covered"
+                                    ],
+                                    ["h24",
+                                        "covered",
+                                        "outdoor"
+                                    ],
+                                    ["noStairs",
+                                        "h24",
+                                        "notCovered",
+                                        "outdoor"
+                                    ],
+                                    ["heating",
+                                        "h24",
+                                        "covered",
+                                        "outdoor"
+                                    ],
+                                    ["heating",
+                                        "airConditioning",
+                                        "noStairs",
+                                        "electronicKey",
+                                        "covered"
+                                    ]
+                                ]
+                            },
+                            "discountedPrice": {
+                                "type": "null",
+                                "title": "The discountedPrice Schema",
+                                "examples": [
+                                    null
+                                ]
+                            },
+                            "possiblyVehicle": {
+                                "type": "boolean",
+                                "title": "The possiblyVehicle Schema",
+                                "examples": [
+                                    false
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "id": "6664d28d-5f0c-4080-9bac-d268466d56bd",
+                            "width": 1.52,
+                            "length": 3.05,
+                            "vehicles": [],
+                            "storageType": "selfStorage",
+                            "regularPrice": 117,
+                            "specifications": [
+                                "covered"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        },
+                        {
+                            "id": "543203ec-5f2b-4ca8-8504-a3d8e867cdcb",
+                            "width": 1.83,
+                            "length": 3.05,
+                            "vehicles": [],
+                            "storageType": "selfStorage",
+                            "regularPrice": null,
+                            "specifications": [
+                                "heating",
+                                "electronicKey",
+                                "h24",
+                                "covered"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        },
+                        {
+                            "id": "3306aee1-037c-4929-81b8-296a288d3a8a",
+                            "width": 1.52,
+                            "length": 2.13,
+                            "vehicles": [],
+                            "storageType": "selfStorage",
+                            "regularPrice": null,
+                            "specifications": [
+                                "heating",
+                                "noStairs",
+                                "carAccess",
+                                "electronicKey",
+                                "h24",
+                                "covered",
+                                "outdoor",
+                                "electricity"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        },
+                        {
+                            "id": "26dbe9fd-a933-4d4c-817e-753049820a21",
+                            "width": 1.52,
+                            "length": 2.13,
+                            "vehicles": [],
+                            "storageType": "selfStorage",
+                            "regularPrice": null,
+                            "specifications": [
+                                "heating",
+                                "electronicKey",
+                                "h24",
+                                "covered"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        },
+                        {
+                            "id": "35542a85-9b70-4fbe-a7c8-bc8f9a8c0d14",
+                            "width": 2.13,
+                            "length": 2.13,
+                            "vehicles": [],
+                            "storageType": "selfStorage",
+                            "regularPrice": null,
+                            "specifications": [
+                                "h24",
+                                "covered"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        },
+                        {
+                            "id": "6405db4c-9fe7-499b-89a1-9355389a7375",
+                            "width": 1.52,
+                            "length": 3.05,
+                            "vehicles": [],
+                            "storageType": "selfStorage",
+                            "regularPrice": null,
+                            "specifications": [
+                                "heating",
+                                "airConditioning",
+                                "electronicKey",
+                                "covered"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        },
+                        {
+                            "id": "573dbc29-e25b-41d6-94df-0e6549523b98",
+                            "width": 1.52,
+                            "length": 3.05,
+                            "vehicles": [],
+                            "storageType": "selfStorage",
+                            "regularPrice": null,
+                            "specifications": [
+                                "heating",
+                                "noStairs",
+                                "electronicKey",
+                                "h24",
+                                "covered"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        },
+                        {
+                            "id": "31155dfe-26ad-4747-82f2-41ed3dbe17c6",
+                            "width": 3.05,
+                            "length": 5.03,
+                            "vehicles": [
+                                "motorcycle",
+                                "car",
+                                "rv",
+                                "boat"
+                            ],
+                            "storageType": "parking",
+                            "regularPrice": null,
+                            "specifications": [
+                                "h24",
+                                "covered",
+                                "outdoor"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        },
+                        {
+                            "id": "23c27be0-920a-4950-8465-2eee675b6788",
+                            "width": 2.44,
+                            "length": 5.49,
+                            "vehicles": [
+                                "motorcycle",
+                                "car",
+                                "rv",
+                                "boat"
+                            ],
+                            "storageType": "parking",
+                            "regularPrice": null,
+                            "specifications": [
+                                "noStairs",
+                                "h24",
+                                "notCovered",
+                                "outdoor"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        },
+                        {
+                            "id": "3b56f883-3094-455c-88dc-bc6dfe60aa16",
+                            "width": 1.22,
+                            "length": 2.13,
+                            "vehicles": [],
+                            "storageType": "selfStorage",
+                            "regularPrice": null,
+                            "specifications": [
+                                "heating",
+                                "h24",
+                                "covered",
+                                "outdoor"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        },
+                        {
+                            "id": "27f7ab18-3eae-45f6-8c12-cfaafb6232f4",
+                            "width": 1.83,
+                            "length": 1.83,
+                            "vehicles": [],
+                            "storageType": "selfStorage",
+                            "regularPrice": null,
+                            "specifications": [
+                                "heating",
+                                "airConditioning",
+                                "noStairs",
+                                "electronicKey",
+                                "covered"
+                            ],
+                            "discountedPrice": null,
+                            "possiblyVehicle": false
+                        }]
+                    },
+                    "facility": {
+                        "type": "object",
+                        "title": "The facility Schema",
+                        "required": [
+                            "title",
+                            "images",
+                            "placeID",
+                            "currency",
+                            "distance",
+                            "largestUnit",
+                            "infoVerified"
+                        ],
+                        "properties": {
+                            "title": {
+                                "type": "string",
+                                "title": "The title Schema",
+                                "examples": [
+                                    "Entrepôts Modulo",
+                                    "Entreposage Québec",
+                                    "Éco-Entrepôts",
+                                    "Mon Locker",
+                                    "Mini-Entrepôt St-Aug NORD \u0026 SUD",
+                                    "StorageMart Mini Entrepôts | Jacquard",
+                                    "StorageMart Mini Entrepôts | Galvani",
+                                    "Entreposage du Moulin",
+                                    "StorageMart Mini Entrepôts | Clemenceau",
+                                    "Mini Entrepôts Québec inc.",
+                                    "Mini Entreposage Quebec | Limoilou"
+                                ]
+                            },
+                            "images": {
+                                "type": "array",
+                                "title": "The images Schema",
+                                "items": {
+                                    "type": "object",
+                                    "title": "A Schema",
+                                    "required": [
+                                        "id",
+                                        "key"
+                                    ],
+                                    "properties": {
+                                        "id": {
+                                            "type": "string",
+                                            "title": "The id Schema",
+                                            "examples": [
+                                                "21701815-3349-453f-b4fa-8da520bc430f",
+                                                "2e4b2d86-b79c-4541-9823-5caf63a5719a",
+                                                "57b81a06-f117-4412-9def-1dc227e9c630",
+                                                "63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b",
+                                                "98636671-29ab-45c2-8f30-9875c9b84873",
+                                                "b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae",
+                                                "7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45",
+                                                "df01ff4c-af01-4439-a147-576e3472b1fe",
+                                                "fba0ff1e-1a00-4106-87ca-7a48dfeee00e",
+                                                "2c104757-8bef-4508-b733-3a95e8367cde",
+                                                "66957914-bec3-427f-bdc3-e66204eebc0f",
+                                                "2031a203-b9dc-4128-b84c-be35b71c1b32",
+                                                "e51954c0-be25-4ee9-a8e7-1026425c18b9",
+                                                "0f44865a-5cf4-4c0a-b610-73668306ccb1",
+                                                "2590b90e-b48f-491d-930a-e00422b5442a",
+                                                "b9c38b49-33b4-49ca-89ea-21be0e3b8de6",
+                                                "c75cb47f-2f5e-46f4-9a41-1d956caa8e9f",
+                                                "ca4ba8eb-0c9f-46de-ba63-897ed1aa0239",
+                                                "f7758be4-6706-4251-840a-43934bb8f561",
+                                                "250469a9-2133-4481-887d-645520ffa8fb",
+                                                "61a1b23c-231d-438f-944f-d13a08af7a57",
+                                                "62f6f540-bee0-48bc-b139-60fbca64c272",
+                                                "708349ce-c510-44af-9ac8-af28a15e829d",
+                                                "7beac466-5867-45ce-bc3f-ff89501c591d",
+                                                "8b21e452-0b6e-40e4-be3e-1913370fa49d",
+                                                "d23d9bfb-4b96-43c0-97c9-be9d2937e102",
+                                                "ea270198-074c-412d-95b6-968c698d0817",
+                                                "0d6f0edf-f6e7-4d98-a608-888a9c5def3d",
+                                                "1034a100-ac60-44f5-98a7-95e0b502d1d5",
+                                                "4af55b29-2dd7-4fa0-904d-d2f7892e867c",
+                                                "a8dfc724-6ac6-4573-9327-79a9a3a15256",
+                                                "b41e9fd4-c46f-4bdb-8a08-84bbd341bdad",
+                                                "d7ba4174-527f-45a6-86c2-1f3c821ac1df",
+                                                "158300f1-9438-4e80-87fa-d63ca25cbbdc",
+                                                "33abcc3f-b1da-43e0-a950-0de5b0306b4c",
+                                                "389585e7-6f0f-4d75-b1ea-38f1bdbdfc48",
+                                                "3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6",
+                                                "7e6ddec2-d796-4d93-b0d2-2d2e98291af9",
+                                                "82b65909-45fd-4f05-bcca-e1a537085756",
+                                                "ba79e30c-eb3c-4b9a-9159-fb85efeb0864",
+                                                "deec190f-eeea-48dc-af69-f75b9ae06fa4",
+                                                "2862b995-3869-418d-be38-bc31cfcde6c0",
+                                                "370380e5-7f98-4332-8e65-a28aea32535e",
+                                                "3e152ce5-1856-4ca8-8077-d1f998401fb5",
+                                                "41a399ee-03e1-4816-b2f8-f2305b6cc0a7",
+                                                "47d39d14-31a3-4407-968b-84c9e318ee94",
+                                                "6e2a5803-9bb5-473d-9b94-21eac4bd43f7",
+                                                "8bb7604a-f678-42af-9112-08a341f4f2c4",
+                                                "9834ffb7-ba16-48c4-997b-66d06215ecb4",
+                                                "aec43494-3756-414d-9ea0-5a169cbe7c49",
+                                                "e39b2786-aa54-46a6-ad4b-116d9420182e",
+                                                "f2d46842-ae8e-4a6d-afcb-77723bf6bbd4",
+                                                "00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0",
+                                                "59bb1ceb-dd47-4150-81f9-ff43dacccf3c",
+                                                "6a572a41-be7a-45a1-8385-d0b5bd1b7454",
+                                                "6e142105-5d41-4fdb-9b48-b2bce4bfc8da",
+                                                "9f56d769-2475-4868-9bbf-f6e65780877b",
+                                                "a7312bba-2ad8-4534-bdd2-fdf536db9bc9",
+                                                "d1acf6a5-2974-4461-9d72-400975759921",
+                                                "5c462c09-c614-4f68-a0c5-9769d2d93eba",
+                                                "94cbae40-ab5f-44b3-81e3-215153ede6b8",
+                                                "f5bd3a80-5470-463f-92a7-da6a179de7fa"
+                                            ]
+                                        },
+                                        "key": {
+                                            "type": "string",
+                                            "title": "The key Schema",
+                                            "examples": [
+                                                "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/21701815-3349-453f-b4fa-8da520bc430f/v1",
+                                                "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/2e4b2d86-b79c-4541-9823-5caf63a5719a/v1",
+                                                "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/57b81a06-f117-4412-9def-1dc227e9c630/v1",
+                                                "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b/v1",
+                                                "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/98636671-29ab-45c2-8f30-9875c9b84873/v1",
+                                                "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae/v1",
+                                                "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45/v1",
+                                                "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/df01ff4c-af01-4439-a147-576e3472b1fe/v1",
+                                                "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/fba0ff1e-1a00-4106-87ca-7a48dfeee00e/v1",
+                                                "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/2c104757-8bef-4508-b733-3a95e8367cde/v1",
+                                                "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/66957914-bec3-427f-bdc3-e66204eebc0f/v1",
+                                                "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/2031a203-b9dc-4128-b84c-be35b71c1b32/v1",
+                                                "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/e51954c0-be25-4ee9-a8e7-1026425c18b9/v1",
+                                                "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/0f44865a-5cf4-4c0a-b610-73668306ccb1/v1",
+                                                "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/2590b90e-b48f-491d-930a-e00422b5442a/v1",
+                                                "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/b9c38b49-33b4-49ca-89ea-21be0e3b8de6/v1",
+                                                "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/c75cb47f-2f5e-46f4-9a41-1d956caa8e9f/v1",
+                                                "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/ca4ba8eb-0c9f-46de-ba63-897ed1aa0239/v1",
+                                                "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/f7758be4-6706-4251-840a-43934bb8f561/v1",
+                                                "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/250469a9-2133-4481-887d-645520ffa8fb/v1",
+                                                "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/61a1b23c-231d-438f-944f-d13a08af7a57/v1",
+                                                "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/62f6f540-bee0-48bc-b139-60fbca64c272/v1",
+                                                "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/708349ce-c510-44af-9ac8-af28a15e829d/v1",
+                                                "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/7beac466-5867-45ce-bc3f-ff89501c591d/v1",
+                                                "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/8b21e452-0b6e-40e4-be3e-1913370fa49d/v1",
+                                                "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/d23d9bfb-4b96-43c0-97c9-be9d2937e102/v1",
+                                                "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/ea270198-074c-412d-95b6-968c698d0817/v1",
+                                                "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/0d6f0edf-f6e7-4d98-a608-888a9c5def3d/v1",
+                                                "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/1034a100-ac60-44f5-98a7-95e0b502d1d5/v1",
+                                                "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/4af55b29-2dd7-4fa0-904d-d2f7892e867c/v1",
+                                                "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/a8dfc724-6ac6-4573-9327-79a9a3a15256/v1",
+                                                "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/b41e9fd4-c46f-4bdb-8a08-84bbd341bdad/v1",
+                                                "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/d7ba4174-527f-45a6-86c2-1f3c821ac1df/v1",
+                                                "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/158300f1-9438-4e80-87fa-d63ca25cbbdc/v1",
+                                                "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/33abcc3f-b1da-43e0-a950-0de5b0306b4c/v1",
+                                                "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/389585e7-6f0f-4d75-b1ea-38f1bdbdfc48/v1",
+                                                "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6/v1",
+                                                "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/7e6ddec2-d796-4d93-b0d2-2d2e98291af9/v1",
+                                                "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/82b65909-45fd-4f05-bcca-e1a537085756/v1",
+                                                "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/ba79e30c-eb3c-4b9a-9159-fb85efeb0864/v1",
+                                                "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/deec190f-eeea-48dc-af69-f75b9ae06fa4/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/2862b995-3869-418d-be38-bc31cfcde6c0/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/370380e5-7f98-4332-8e65-a28aea32535e/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/3e152ce5-1856-4ca8-8077-d1f998401fb5/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/41a399ee-03e1-4816-b2f8-f2305b6cc0a7/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/47d39d14-31a3-4407-968b-84c9e318ee94/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/6e2a5803-9bb5-473d-9b94-21eac4bd43f7/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/8bb7604a-f678-42af-9112-08a341f4f2c4/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/9834ffb7-ba16-48c4-997b-66d06215ecb4/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/aec43494-3756-414d-9ea0-5a169cbe7c49/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/e39b2786-aa54-46a6-ad4b-116d9420182e/v1",
+                                                "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/f2d46842-ae8e-4a6d-afcb-77723bf6bbd4/v1",
+                                                "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0/v1",
+                                                "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/59bb1ceb-dd47-4150-81f9-ff43dacccf3c/v1",
+                                                "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6a572a41-be7a-45a1-8385-d0b5bd1b7454/v1",
+                                                "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6e142105-5d41-4fdb-9b48-b2bce4bfc8da/v1",
+                                                "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/9f56d769-2475-4868-9bbf-f6e65780877b/v1",
+                                                "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/a7312bba-2ad8-4534-bdd2-fdf536db9bc9/v1",
+                                                "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/d1acf6a5-2974-4461-9d72-400975759921/v1",
+                                                "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/5c462c09-c614-4f68-a0c5-9769d2d93eba/v1",
+                                                "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/94cbae40-ab5f-44b3-81e3-215153ede6b8/v1",
+                                                "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/f5bd3a80-5470-463f-92a7-da6a179de7fa/v1"
+                                            ]
+                                        }
+                                    },
+                                    "examples": [{
+                                        "id": "21701815-3349-453f-b4fa-8da520bc430f",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/21701815-3349-453f-b4fa-8da520bc430f/v1"
+                                    },
+                                    {
+                                        "id": "2e4b2d86-b79c-4541-9823-5caf63a5719a",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/2e4b2d86-b79c-4541-9823-5caf63a5719a/v1"
+                                    },
+                                    {
+                                        "id": "57b81a06-f117-4412-9def-1dc227e9c630",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/57b81a06-f117-4412-9def-1dc227e9c630/v1"
+                                    },
+                                    {
+                                        "id": "63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b/v1"
+                                    },
+                                    {
+                                        "id": "98636671-29ab-45c2-8f30-9875c9b84873",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/98636671-29ab-45c2-8f30-9875c9b84873/v1"
+                                    },
+                                    {
+                                        "id": "b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae/v1"
+                                    },
+                                    {
+                                        "id": "7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45",
+                                        "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45/v1"
+                                    },
+                                    {
+                                        "id": "df01ff4c-af01-4439-a147-576e3472b1fe",
+                                        "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/df01ff4c-af01-4439-a147-576e3472b1fe/v1"
+                                    },
+                                    {
+                                        "id": "fba0ff1e-1a00-4106-87ca-7a48dfeee00e",
+                                        "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/fba0ff1e-1a00-4106-87ca-7a48dfeee00e/v1"
+                                    },
+                                    {
+                                        "id": "2c104757-8bef-4508-b733-3a95e8367cde",
+                                        "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/2c104757-8bef-4508-b733-3a95e8367cde/v1"
+                                    },
+                                    {
+                                        "id": "66957914-bec3-427f-bdc3-e66204eebc0f",
+                                        "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/66957914-bec3-427f-bdc3-e66204eebc0f/v1"
+                                    },
+                                    {
+                                        "id": "2031a203-b9dc-4128-b84c-be35b71c1b32",
+                                        "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/2031a203-b9dc-4128-b84c-be35b71c1b32/v1"
+                                    },
+                                    {
+                                        "id": "e51954c0-be25-4ee9-a8e7-1026425c18b9",
+                                        "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/e51954c0-be25-4ee9-a8e7-1026425c18b9/v1"
+                                    },
+                                    {
+                                        "id": "0f44865a-5cf4-4c0a-b610-73668306ccb1",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/0f44865a-5cf4-4c0a-b610-73668306ccb1/v1"
+                                    },
+                                    {
+                                        "id": "2590b90e-b48f-491d-930a-e00422b5442a",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/2590b90e-b48f-491d-930a-e00422b5442a/v1"
+                                    },
+                                    {
+                                        "id": "b9c38b49-33b4-49ca-89ea-21be0e3b8de6",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/b9c38b49-33b4-49ca-89ea-21be0e3b8de6/v1"
+                                    },
+                                    {
+                                        "id": "c75cb47f-2f5e-46f4-9a41-1d956caa8e9f",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/c75cb47f-2f5e-46f4-9a41-1d956caa8e9f/v1"
+                                    },
+                                    {
+                                        "id": "ca4ba8eb-0c9f-46de-ba63-897ed1aa0239",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/ca4ba8eb-0c9f-46de-ba63-897ed1aa0239/v1"
+                                    },
+                                    {
+                                        "id": "f7758be4-6706-4251-840a-43934bb8f561",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/f7758be4-6706-4251-840a-43934bb8f561/v1"
+                                    },
+                                    {
+                                        "id": "250469a9-2133-4481-887d-645520ffa8fb",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/250469a9-2133-4481-887d-645520ffa8fb/v1"
+                                    },
+                                    {
+                                        "id": "61a1b23c-231d-438f-944f-d13a08af7a57",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/61a1b23c-231d-438f-944f-d13a08af7a57/v1"
+                                    },
+                                    {
+                                        "id": "62f6f540-bee0-48bc-b139-60fbca64c272",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/62f6f540-bee0-48bc-b139-60fbca64c272/v1"
+                                    },
+                                    {
+                                        "id": "708349ce-c510-44af-9ac8-af28a15e829d",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/708349ce-c510-44af-9ac8-af28a15e829d/v1"
+                                    },
+                                    {
+                                        "id": "7beac466-5867-45ce-bc3f-ff89501c591d",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/7beac466-5867-45ce-bc3f-ff89501c591d/v1"
+                                    },
+                                    {
+                                        "id": "8b21e452-0b6e-40e4-be3e-1913370fa49d",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/8b21e452-0b6e-40e4-be3e-1913370fa49d/v1"
+                                    },
+                                    {
+                                        "id": "d23d9bfb-4b96-43c0-97c9-be9d2937e102",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/d23d9bfb-4b96-43c0-97c9-be9d2937e102/v1"
+                                    },
+                                    {
+                                        "id": "ea270198-074c-412d-95b6-968c698d0817",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/ea270198-074c-412d-95b6-968c698d0817/v1"
+                                    },
+                                    {
+                                        "id": "0d6f0edf-f6e7-4d98-a608-888a9c5def3d",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/0d6f0edf-f6e7-4d98-a608-888a9c5def3d/v1"
+                                    },
+                                    {
+                                        "id": "1034a100-ac60-44f5-98a7-95e0b502d1d5",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/1034a100-ac60-44f5-98a7-95e0b502d1d5/v1"
+                                    },
+                                    {
+                                        "id": "4af55b29-2dd7-4fa0-904d-d2f7892e867c",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/4af55b29-2dd7-4fa0-904d-d2f7892e867c/v1"
+                                    },
+                                    {
+                                        "id": "a8dfc724-6ac6-4573-9327-79a9a3a15256",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/a8dfc724-6ac6-4573-9327-79a9a3a15256/v1"
+                                    },
+                                    {
+                                        "id": "b41e9fd4-c46f-4bdb-8a08-84bbd341bdad",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/b41e9fd4-c46f-4bdb-8a08-84bbd341bdad/v1"
+                                    },
+                                    {
+                                        "id": "d7ba4174-527f-45a6-86c2-1f3c821ac1df",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/d7ba4174-527f-45a6-86c2-1f3c821ac1df/v1"
+                                    },
+                                    {
+                                        "id": "158300f1-9438-4e80-87fa-d63ca25cbbdc",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/158300f1-9438-4e80-87fa-d63ca25cbbdc/v1"
+                                    },
+                                    {
+                                        "id": "33abcc3f-b1da-43e0-a950-0de5b0306b4c",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/33abcc3f-b1da-43e0-a950-0de5b0306b4c/v1"
+                                    },
+                                    {
+                                        "id": "389585e7-6f0f-4d75-b1ea-38f1bdbdfc48",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/389585e7-6f0f-4d75-b1ea-38f1bdbdfc48/v1"
+                                    },
+                                    {
+                                        "id": "3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6/v1"
+                                    },
+                                    {
+                                        "id": "7e6ddec2-d796-4d93-b0d2-2d2e98291af9",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/7e6ddec2-d796-4d93-b0d2-2d2e98291af9/v1"
+                                    },
+                                    {
+                                        "id": "82b65909-45fd-4f05-bcca-e1a537085756",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/82b65909-45fd-4f05-bcca-e1a537085756/v1"
+                                    },
+                                    {
+                                        "id": "ba79e30c-eb3c-4b9a-9159-fb85efeb0864",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/ba79e30c-eb3c-4b9a-9159-fb85efeb0864/v1"
+                                    },
+                                    {
+                                        "id": "deec190f-eeea-48dc-af69-f75b9ae06fa4",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/deec190f-eeea-48dc-af69-f75b9ae06fa4/v1"
+                                    },
+                                    {
+                                        "id": "2862b995-3869-418d-be38-bc31cfcde6c0",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/2862b995-3869-418d-be38-bc31cfcde6c0/v1"
+                                    },
+                                    {
+                                        "id": "370380e5-7f98-4332-8e65-a28aea32535e",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/370380e5-7f98-4332-8e65-a28aea32535e/v1"
+                                    },
+                                    {
+                                        "id": "3e152ce5-1856-4ca8-8077-d1f998401fb5",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/3e152ce5-1856-4ca8-8077-d1f998401fb5/v1"
+                                    },
+                                    {
+                                        "id": "41a399ee-03e1-4816-b2f8-f2305b6cc0a7",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/41a399ee-03e1-4816-b2f8-f2305b6cc0a7/v1"
+                                    },
+                                    {
+                                        "id": "47d39d14-31a3-4407-968b-84c9e318ee94",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/47d39d14-31a3-4407-968b-84c9e318ee94/v1"
+                                    },
+                                    {
+                                        "id": "6e2a5803-9bb5-473d-9b94-21eac4bd43f7",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/6e2a5803-9bb5-473d-9b94-21eac4bd43f7/v1"
+                                    },
+                                    {
+                                        "id": "8bb7604a-f678-42af-9112-08a341f4f2c4",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/8bb7604a-f678-42af-9112-08a341f4f2c4/v1"
+                                    },
+                                    {
+                                        "id": "9834ffb7-ba16-48c4-997b-66d06215ecb4",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/9834ffb7-ba16-48c4-997b-66d06215ecb4/v1"
+                                    },
+                                    {
+                                        "id": "aec43494-3756-414d-9ea0-5a169cbe7c49",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/aec43494-3756-414d-9ea0-5a169cbe7c49/v1"
+                                    },
+                                    {
+                                        "id": "e39b2786-aa54-46a6-ad4b-116d9420182e",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/e39b2786-aa54-46a6-ad4b-116d9420182e/v1"
+                                    },
+                                    {
+                                        "id": "f2d46842-ae8e-4a6d-afcb-77723bf6bbd4",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/f2d46842-ae8e-4a6d-afcb-77723bf6bbd4/v1"
+                                    },
+                                    {
+                                        "id": "00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0/v1"
+                                    },
+                                    {
+                                        "id": "59bb1ceb-dd47-4150-81f9-ff43dacccf3c",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/59bb1ceb-dd47-4150-81f9-ff43dacccf3c/v1"
+                                    },
+                                    {
+                                        "id": "6a572a41-be7a-45a1-8385-d0b5bd1b7454",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6a572a41-be7a-45a1-8385-d0b5bd1b7454/v1"
+                                    },
+                                    {
+                                        "id": "6e142105-5d41-4fdb-9b48-b2bce4bfc8da",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6e142105-5d41-4fdb-9b48-b2bce4bfc8da/v1"
+                                    },
+                                    {
+                                        "id": "9f56d769-2475-4868-9bbf-f6e65780877b",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/9f56d769-2475-4868-9bbf-f6e65780877b/v1"
+                                    },
+                                    {
+                                        "id": "a7312bba-2ad8-4534-bdd2-fdf536db9bc9",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/a7312bba-2ad8-4534-bdd2-fdf536db9bc9/v1"
+                                    },
+                                    {
+                                        "id": "d1acf6a5-2974-4461-9d72-400975759921",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/d1acf6a5-2974-4461-9d72-400975759921/v1"
+                                    },
+                                    {
+                                        "id": "5c462c09-c614-4f68-a0c5-9769d2d93eba",
+                                        "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/5c462c09-c614-4f68-a0c5-9769d2d93eba/v1"
+                                    },
+                                    {
+                                        "id": "94cbae40-ab5f-44b3-81e3-215153ede6b8",
+                                        "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/94cbae40-ab5f-44b3-81e3-215153ede6b8/v1"
+                                    },
+                                    {
+                                        "id": "f5bd3a80-5470-463f-92a7-da6a179de7fa",
+                                        "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/f5bd3a80-5470-463f-92a7-da6a179de7fa/v1"
+                                    }]
+                                },
+                                "examples": [
+                                    [{
+                                        "id": "21701815-3349-453f-b4fa-8da520bc430f",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/21701815-3349-453f-b4fa-8da520bc430f/v1"
+                                    },
+                                    {
+                                        "id": "2e4b2d86-b79c-4541-9823-5caf63a5719a",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/2e4b2d86-b79c-4541-9823-5caf63a5719a/v1"
+                                    },
+                                    {
+                                        "id": "57b81a06-f117-4412-9def-1dc227e9c630",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/57b81a06-f117-4412-9def-1dc227e9c630/v1"
+                                    },
+                                    {
+                                        "id": "63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b/v1"
+                                    },
+                                    {
+                                        "id": "98636671-29ab-45c2-8f30-9875c9b84873",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/98636671-29ab-45c2-8f30-9875c9b84873/v1"
+                                    },
+                                    {
+                                        "id": "b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae",
+                                        "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae/v1"
+                                    }],
+                                    [{
+                                        "id": "7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45",
+                                        "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45/v1"
+                                    },
+                                    {
+                                        "id": "df01ff4c-af01-4439-a147-576e3472b1fe",
+                                        "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/df01ff4c-af01-4439-a147-576e3472b1fe/v1"
+                                    },
+                                    {
+                                        "id": "fba0ff1e-1a00-4106-87ca-7a48dfeee00e",
+                                        "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/fba0ff1e-1a00-4106-87ca-7a48dfeee00e/v1"
+                                    }],
+                                    [{
+                                        "id": "2c104757-8bef-4508-b733-3a95e8367cde",
+                                        "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/2c104757-8bef-4508-b733-3a95e8367cde/v1"
+                                    },
+                                    {
+                                        "id": "66957914-bec3-427f-bdc3-e66204eebc0f",
+                                        "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/66957914-bec3-427f-bdc3-e66204eebc0f/v1"
+                                    }],
+                                    [{
+                                        "id": "2031a203-b9dc-4128-b84c-be35b71c1b32",
+                                        "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/2031a203-b9dc-4128-b84c-be35b71c1b32/v1"
+                                    },
+                                    {
+                                        "id": "e51954c0-be25-4ee9-a8e7-1026425c18b9",
+                                        "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/e51954c0-be25-4ee9-a8e7-1026425c18b9/v1"
+                                    }],
+                                    [{
+                                        "id": "0f44865a-5cf4-4c0a-b610-73668306ccb1",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/0f44865a-5cf4-4c0a-b610-73668306ccb1/v1"
+                                    },
+                                    {
+                                        "id": "2590b90e-b48f-491d-930a-e00422b5442a",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/2590b90e-b48f-491d-930a-e00422b5442a/v1"
+                                    },
+                                    {
+                                        "id": "b9c38b49-33b4-49ca-89ea-21be0e3b8de6",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/b9c38b49-33b4-49ca-89ea-21be0e3b8de6/v1"
+                                    },
+                                    {
+                                        "id": "c75cb47f-2f5e-46f4-9a41-1d956caa8e9f",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/c75cb47f-2f5e-46f4-9a41-1d956caa8e9f/v1"
+                                    },
+                                    {
+                                        "id": "ca4ba8eb-0c9f-46de-ba63-897ed1aa0239",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/ca4ba8eb-0c9f-46de-ba63-897ed1aa0239/v1"
+                                    },
+                                    {
+                                        "id": "f7758be4-6706-4251-840a-43934bb8f561",
+                                        "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/f7758be4-6706-4251-840a-43934bb8f561/v1"
+                                    }],
+                                    [{
+                                        "id": "250469a9-2133-4481-887d-645520ffa8fb",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/250469a9-2133-4481-887d-645520ffa8fb/v1"
+                                    },
+                                    {
+                                        "id": "61a1b23c-231d-438f-944f-d13a08af7a57",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/61a1b23c-231d-438f-944f-d13a08af7a57/v1"
+                                    },
+                                    {
+                                        "id": "62f6f540-bee0-48bc-b139-60fbca64c272",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/62f6f540-bee0-48bc-b139-60fbca64c272/v1"
+                                    },
+                                    {
+                                        "id": "708349ce-c510-44af-9ac8-af28a15e829d",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/708349ce-c510-44af-9ac8-af28a15e829d/v1"
+                                    },
+                                    {
+                                        "id": "7beac466-5867-45ce-bc3f-ff89501c591d",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/7beac466-5867-45ce-bc3f-ff89501c591d/v1"
+                                    },
+                                    {
+                                        "id": "8b21e452-0b6e-40e4-be3e-1913370fa49d",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/8b21e452-0b6e-40e4-be3e-1913370fa49d/v1"
+                                    },
+                                    {
+                                        "id": "d23d9bfb-4b96-43c0-97c9-be9d2937e102",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/d23d9bfb-4b96-43c0-97c9-be9d2937e102/v1"
+                                    },
+                                    {
+                                        "id": "ea270198-074c-412d-95b6-968c698d0817",
+                                        "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/ea270198-074c-412d-95b6-968c698d0817/v1"
+                                    }],
+                                    [{
+                                        "id": "0d6f0edf-f6e7-4d98-a608-888a9c5def3d",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/0d6f0edf-f6e7-4d98-a608-888a9c5def3d/v1"
+                                    },
+                                    {
+                                        "id": "1034a100-ac60-44f5-98a7-95e0b502d1d5",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/1034a100-ac60-44f5-98a7-95e0b502d1d5/v1"
+                                    },
+                                    {
+                                        "id": "4af55b29-2dd7-4fa0-904d-d2f7892e867c",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/4af55b29-2dd7-4fa0-904d-d2f7892e867c/v1"
+                                    },
+                                    {
+                                        "id": "a8dfc724-6ac6-4573-9327-79a9a3a15256",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/a8dfc724-6ac6-4573-9327-79a9a3a15256/v1"
+                                    },
+                                    {
+                                        "id": "b41e9fd4-c46f-4bdb-8a08-84bbd341bdad",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/b41e9fd4-c46f-4bdb-8a08-84bbd341bdad/v1"
+                                    },
+                                    {
+                                        "id": "d7ba4174-527f-45a6-86c2-1f3c821ac1df",
+                                        "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/d7ba4174-527f-45a6-86c2-1f3c821ac1df/v1"
+                                    }],
+                                    [{
+                                        "id": "158300f1-9438-4e80-87fa-d63ca25cbbdc",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/158300f1-9438-4e80-87fa-d63ca25cbbdc/v1"
+                                    },
+                                    {
+                                        "id": "33abcc3f-b1da-43e0-a950-0de5b0306b4c",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/33abcc3f-b1da-43e0-a950-0de5b0306b4c/v1"
+                                    },
+                                    {
+                                        "id": "389585e7-6f0f-4d75-b1ea-38f1bdbdfc48",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/389585e7-6f0f-4d75-b1ea-38f1bdbdfc48/v1"
+                                    },
+                                    {
+                                        "id": "3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6/v1"
+                                    },
+                                    {
+                                        "id": "7e6ddec2-d796-4d93-b0d2-2d2e98291af9",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/7e6ddec2-d796-4d93-b0d2-2d2e98291af9/v1"
+                                    },
+                                    {
+                                        "id": "82b65909-45fd-4f05-bcca-e1a537085756",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/82b65909-45fd-4f05-bcca-e1a537085756/v1"
+                                    },
+                                    {
+                                        "id": "ba79e30c-eb3c-4b9a-9159-fb85efeb0864",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/ba79e30c-eb3c-4b9a-9159-fb85efeb0864/v1"
+                                    },
+                                    {
+                                        "id": "deec190f-eeea-48dc-af69-f75b9ae06fa4",
+                                        "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/deec190f-eeea-48dc-af69-f75b9ae06fa4/v1"
+                                    }],
+                                    [{
+                                        "id": "2862b995-3869-418d-be38-bc31cfcde6c0",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/2862b995-3869-418d-be38-bc31cfcde6c0/v1"
+                                    },
+                                    {
+                                        "id": "370380e5-7f98-4332-8e65-a28aea32535e",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/370380e5-7f98-4332-8e65-a28aea32535e/v1"
+                                    },
+                                    {
+                                        "id": "3e152ce5-1856-4ca8-8077-d1f998401fb5",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/3e152ce5-1856-4ca8-8077-d1f998401fb5/v1"
+                                    },
+                                    {
+                                        "id": "41a399ee-03e1-4816-b2f8-f2305b6cc0a7",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/41a399ee-03e1-4816-b2f8-f2305b6cc0a7/v1"
+                                    },
+                                    {
+                                        "id": "47d39d14-31a3-4407-968b-84c9e318ee94",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/47d39d14-31a3-4407-968b-84c9e318ee94/v1"
+                                    },
+                                    {
+                                        "id": "6e2a5803-9bb5-473d-9b94-21eac4bd43f7",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/6e2a5803-9bb5-473d-9b94-21eac4bd43f7/v1"
+                                    },
+                                    {
+                                        "id": "8bb7604a-f678-42af-9112-08a341f4f2c4",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/8bb7604a-f678-42af-9112-08a341f4f2c4/v1"
+                                    },
+                                    {
+                                        "id": "9834ffb7-ba16-48c4-997b-66d06215ecb4",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/9834ffb7-ba16-48c4-997b-66d06215ecb4/v1"
+                                    },
+                                    {
+                                        "id": "aec43494-3756-414d-9ea0-5a169cbe7c49",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/aec43494-3756-414d-9ea0-5a169cbe7c49/v1"
+                                    },
+                                    {
+                                        "id": "e39b2786-aa54-46a6-ad4b-116d9420182e",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/e39b2786-aa54-46a6-ad4b-116d9420182e/v1"
+                                    },
+                                    {
+                                        "id": "f2d46842-ae8e-4a6d-afcb-77723bf6bbd4",
+                                        "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/f2d46842-ae8e-4a6d-afcb-77723bf6bbd4/v1"
+                                    }],
+                                    [{
+                                        "id": "00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0/v1"
+                                    },
+                                    {
+                                        "id": "59bb1ceb-dd47-4150-81f9-ff43dacccf3c",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/59bb1ceb-dd47-4150-81f9-ff43dacccf3c/v1"
+                                    },
+                                    {
+                                        "id": "6a572a41-be7a-45a1-8385-d0b5bd1b7454",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6a572a41-be7a-45a1-8385-d0b5bd1b7454/v1"
+                                    },
+                                    {
+                                        "id": "6e142105-5d41-4fdb-9b48-b2bce4bfc8da",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6e142105-5d41-4fdb-9b48-b2bce4bfc8da/v1"
+                                    },
+                                    {
+                                        "id": "9f56d769-2475-4868-9bbf-f6e65780877b",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/9f56d769-2475-4868-9bbf-f6e65780877b/v1"
+                                    },
+                                    {
+                                        "id": "a7312bba-2ad8-4534-bdd2-fdf536db9bc9",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/a7312bba-2ad8-4534-bdd2-fdf536db9bc9/v1"
+                                    },
+                                    {
+                                        "id": "d1acf6a5-2974-4461-9d72-400975759921",
+                                        "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/d1acf6a5-2974-4461-9d72-400975759921/v1"
+                                    }],
+                                    [{
+                                        "id": "5c462c09-c614-4f68-a0c5-9769d2d93eba",
+                                        "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/5c462c09-c614-4f68-a0c5-9769d2d93eba/v1"
+                                    },
+                                    {
+                                        "id": "94cbae40-ab5f-44b3-81e3-215153ede6b8",
+                                        "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/94cbae40-ab5f-44b3-81e3-215153ede6b8/v1"
+                                    },
+                                    {
+                                        "id": "f5bd3a80-5470-463f-92a7-da6a179de7fa",
+                                        "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/f5bd3a80-5470-463f-92a7-da6a179de7fa/v1"
+                                    }]
+                                ]
+                            },
+                            "placeID": {
+                                "type": "string",
+                                "title": "The placeID Schema",
+                                "examples": [
+                                    "ChIJE_fc1siTuEwROmFHZDhQqDY",
+                                    "ChIJRT-7i8WXuEwRwasr3m0VwuY",
+                                    "ChIJWShZbFGfuEwR-jH2IxjoIAc",
+                                    "ChIJ0Qbr2AObuEwRs77CNRgODW4",
+                                    "ChIJWXnqqKGbuEwRuynvLbUF31Q",
+                                    "ChIJH88yyQKXuEwRFZMQbU00eeM",
+                                    "ChIJw24ms-GWuEwRMlJpTvDZ6I0",
+                                    "ChIJEfWJLpyluEwR51Du__j-CNQ",
+                                    "ChIJqQxsgTO8uEwRNFWOfPKwNTM",
+                                    "ChIJtSNE3Ru5uEwRrNVhUR9596A",
+                                    "ChIJ2VVKsE2XuEwRtifAnaZsNXQ"
+                                ]
+                            },
+                            "currency": {
+                                "type": "string",
+                                "title": "The currency Schema",
+                                "examples": [
+                                    "CAD"
+                                ]
+                            },
+                            "distance": {
+                                "type": "integer",
+                                "title": "The distance Schema",
+                                "examples": [
+                                    9980,
+                                    3952,
+                                    17140,
+                                    18796,
+                                    18846,
+                                    6021,
+                                    6834,
+                                    19499,
+                                    7235,
+                                    18319,
+                                    1661
+                                ]
+                            },
+                            "largestUnit": {
+                                "type": "object",
+                                "title": "The largestUnit Schema",
+                                "required": [
+                                    "width",
+                                    "length"
+                                ],
+                                "properties": {
+                                    "width": {
+                                        "type": "number",
+                                        "title": "The width Schema",
+                                        "examples": [
+                                            3.66,
+                                            3.05,
+                                            3.51,
+                                            2.44
+                                        ]
+                                    },
+                                    "length": {
+                                        "type": "number",
+                                        "title": "The length Schema",
+                                        "examples": [
+                                            7.62,
+                                            6.1,
+                                            9.14,
+                                            4.15,
+                                            3.05,
+                                            5.03,
+                                            5.49
+                                        ]
+                                    }
+                                },
+                                "examples": [{
+                                    "width": 3.66,
+                                    "length": 7.62
+                                },
+                                {
+                                    "width": 3.05,
+                                    "length": 6.1
+                                },
+                                {
+                                    "width": 3.05,
+                                    "length": 9.14
+                                },
+                                {
+                                    "width": 3.51,
+                                    "length": 4.15
+                                },
+                                {
+                                    "width": 2.44,
+                                    "length": 7.62
+                                },
+                                {
+                                    "width": 3.05,
+                                    "length": 9.14
+                                },
+                                {
+                                    "width": 3.05,
+                                    "length": 3.05
+                                },
+                                {
+                                    "width": 3.05,
+                                    "length": 5.03
+                                },
+                                {
+                                    "width": 2.44,
+                                    "length": 5.49
+                                },
+                                {
+                                    "width": 3.05,
+                                    "length": 6.1
+                                },
+                                {
+                                    "width": 3.05,
+                                    "length": 7.62
+                                }]
+                            },
+                            "infoVerified": {
+                                "type": "boolean",
+                                "title": "The infoVerified Schema",
+                                "examples": [
+                                    true,
+                                    false
+                                ]
+                            }
+                        },
+                        "examples": [{
+                            "title": "Entrepôts Modulo",
+                            "images": [{
+                                "id": "21701815-3349-453f-b4fa-8da520bc430f",
+                                "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/21701815-3349-453f-b4fa-8da520bc430f/v1"
+                            },
+                            {
+                                "id": "2e4b2d86-b79c-4541-9823-5caf63a5719a",
+                                "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/2e4b2d86-b79c-4541-9823-5caf63a5719a/v1"
+                            },
+                            {
+                                "id": "57b81a06-f117-4412-9def-1dc227e9c630",
+                                "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/57b81a06-f117-4412-9def-1dc227e9c630/v1"
+                            },
+                            {
+                                "id": "63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b",
+                                "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b/v1"
+                            },
+                            {
+                                "id": "98636671-29ab-45c2-8f30-9875c9b84873",
+                                "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/98636671-29ab-45c2-8f30-9875c9b84873/v1"
+                            },
+                            {
+                                "id": "b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae",
+                                "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae/v1"
+                            }],
+                            "placeID": "ChIJE_fc1siTuEwROmFHZDhQqDY",
+                            "currency": "CAD",
+                            "distance": 9980,
+                            "largestUnit": {
+                                "width": 3.66,
+                                "length": 7.62
+                            },
+                            "infoVerified": true
+                        },
+                        {
+                            "title": "Entreposage Québec",
+                            "images": [{
+                                "id": "7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45",
+                                "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45/v1"
+                            },
+                            {
+                                "id": "df01ff4c-af01-4439-a147-576e3472b1fe",
+                                "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/df01ff4c-af01-4439-a147-576e3472b1fe/v1"
+                            },
+                            {
+                                "id": "fba0ff1e-1a00-4106-87ca-7a48dfeee00e",
+                                "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/fba0ff1e-1a00-4106-87ca-7a48dfeee00e/v1"
+                            }],
+                            "placeID": "ChIJRT-7i8WXuEwRwasr3m0VwuY",
+                            "currency": "CAD",
+                            "distance": 3952,
+                            "largestUnit": {
+                                "width": 3.05,
+                                "length": 6.1
+                            },
+                            "infoVerified": true
+                        },
+                        {
+                            "title": "Éco-Entrepôts",
+                            "images": [{
+                                "id": "2c104757-8bef-4508-b733-3a95e8367cde",
+                                "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/2c104757-8bef-4508-b733-3a95e8367cde/v1"
+                            },
+                            {
+                                "id": "66957914-bec3-427f-bdc3-e66204eebc0f",
+                                "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/66957914-bec3-427f-bdc3-e66204eebc0f/v1"
+                            }],
+                            "placeID": "ChIJWShZbFGfuEwR-jH2IxjoIAc",
+                            "currency": "CAD",
+                            "distance": 17140,
+                            "largestUnit": {
+                                "width": 3.05,
+                                "length": 9.14
+                            },
+                            "infoVerified": true
+                        },
+                        {
+                            "title": "Mon Locker",
+                            "images": [{
+                                "id": "2031a203-b9dc-4128-b84c-be35b71c1b32",
+                                "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/2031a203-b9dc-4128-b84c-be35b71c1b32/v1"
+                            },
+                            {
+                                "id": "e51954c0-be25-4ee9-a8e7-1026425c18b9",
+                                "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/e51954c0-be25-4ee9-a8e7-1026425c18b9/v1"
+                            }],
+                            "placeID": "ChIJ0Qbr2AObuEwRs77CNRgODW4",
+                            "currency": "CAD",
+                            "distance": 18796,
+                            "largestUnit": {
+                                "width": 3.51,
+                                "length": 4.15
+                            },
+                            "infoVerified": true
+                        },
+                        {
+                            "title": "Mini-Entrepôt St-Aug NORD \u0026 SUD",
+                            "images": [{
+                                "id": "0f44865a-5cf4-4c0a-b610-73668306ccb1",
+                                "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/0f44865a-5cf4-4c0a-b610-73668306ccb1/v1"
+                            },
+                            {
+                                "id": "2590b90e-b48f-491d-930a-e00422b5442a",
+                                "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/2590b90e-b48f-491d-930a-e00422b5442a/v1"
+                            },
+                            {
+                                "id": "b9c38b49-33b4-49ca-89ea-21be0e3b8de6",
+                                "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/b9c38b49-33b4-49ca-89ea-21be0e3b8de6/v1"
+                            },
+                            {
+                                "id": "c75cb47f-2f5e-46f4-9a41-1d956caa8e9f",
+                                "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/c75cb47f-2f5e-46f4-9a41-1d956caa8e9f/v1"
+                            },
+                            {
+                                "id": "ca4ba8eb-0c9f-46de-ba63-897ed1aa0239",
+                                "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/ca4ba8eb-0c9f-46de-ba63-897ed1aa0239/v1"
+                            },
+                            {
+                                "id": "f7758be4-6706-4251-840a-43934bb8f561",
+                                "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/f7758be4-6706-4251-840a-43934bb8f561/v1"
+                            }],
+                            "placeID": "ChIJWXnqqKGbuEwRuynvLbUF31Q",
+                            "currency": "CAD",
+                            "distance": 18846,
+                            "largestUnit": {
+                                "width": 2.44,
+                                "length": 7.62
+                            },
+                            "infoVerified": true
+                        },
+                        {
+                            "title": "StorageMart Mini Entrepôts | Jacquard",
+                            "images": [{
+                                "id": "250469a9-2133-4481-887d-645520ffa8fb",
+                                "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/250469a9-2133-4481-887d-645520ffa8fb/v1"
+                            },
+                            {
+                                "id": "61a1b23c-231d-438f-944f-d13a08af7a57",
+                                "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/61a1b23c-231d-438f-944f-d13a08af7a57/v1"
+                            },
+                            {
+                                "id": "62f6f540-bee0-48bc-b139-60fbca64c272",
+                                "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/62f6f540-bee0-48bc-b139-60fbca64c272/v1"
+                            },
+                            {
+                                "id": "708349ce-c510-44af-9ac8-af28a15e829d",
+                                "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/708349ce-c510-44af-9ac8-af28a15e829d/v1"
+                            },
+                            {
+                                "id": "7beac466-5867-45ce-bc3f-ff89501c591d",
+                                "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/7beac466-5867-45ce-bc3f-ff89501c591d/v1"
+                            },
+                            {
+                                "id": "8b21e452-0b6e-40e4-be3e-1913370fa49d",
+                                "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/8b21e452-0b6e-40e4-be3e-1913370fa49d/v1"
+                            },
+                            {
+                                "id": "d23d9bfb-4b96-43c0-97c9-be9d2937e102",
+                                "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/d23d9bfb-4b96-43c0-97c9-be9d2937e102/v1"
+                            },
+                            {
+                                "id": "ea270198-074c-412d-95b6-968c698d0817",
+                                "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/ea270198-074c-412d-95b6-968c698d0817/v1"
+                            }],
+                            "placeID": "ChIJH88yyQKXuEwRFZMQbU00eeM",
+                            "currency": "CAD",
+                            "distance": 6021,
+                            "largestUnit": {
+                                "width": 3.05,
+                                "length": 9.14
+                            },
+                            "infoVerified": false
+                        },
+                        {
+                            "title": "StorageMart Mini Entrepôts | Galvani",
+                            "images": [{
+                                "id": "0d6f0edf-f6e7-4d98-a608-888a9c5def3d",
+                                "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/0d6f0edf-f6e7-4d98-a608-888a9c5def3d/v1"
+                            },
+                            {
+                                "id": "1034a100-ac60-44f5-98a7-95e0b502d1d5",
+                                "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/1034a100-ac60-44f5-98a7-95e0b502d1d5/v1"
+                            },
+                            {
+                                "id": "4af55b29-2dd7-4fa0-904d-d2f7892e867c",
+                                "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/4af55b29-2dd7-4fa0-904d-d2f7892e867c/v1"
+                            },
+                            {
+                                "id": "a8dfc724-6ac6-4573-9327-79a9a3a15256",
+                                "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/a8dfc724-6ac6-4573-9327-79a9a3a15256/v1"
+                            },
+                            {
+                                "id": "b41e9fd4-c46f-4bdb-8a08-84bbd341bdad",
+                                "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/b41e9fd4-c46f-4bdb-8a08-84bbd341bdad/v1"
+                            },
+                            {
+                                "id": "d7ba4174-527f-45a6-86c2-1f3c821ac1df",
+                                "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/d7ba4174-527f-45a6-86c2-1f3c821ac1df/v1"
+                            }],
+                            "placeID": "ChIJw24ms-GWuEwRMlJpTvDZ6I0",
+                            "currency": "CAD",
+                            "distance": 6834,
+                            "largestUnit": {
+                                "width": 3.05,
+                                "length": 3.05
+                            },
+                            "infoVerified": false
+                        },
+                        {
+                            "title": "Entreposage du Moulin",
+                            "images": [{
+                                "id": "158300f1-9438-4e80-87fa-d63ca25cbbdc",
+                                "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/158300f1-9438-4e80-87fa-d63ca25cbbdc/v1"
+                            },
+                            {
+                                "id": "33abcc3f-b1da-43e0-a950-0de5b0306b4c",
+                                "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/33abcc3f-b1da-43e0-a950-0de5b0306b4c/v1"
+                            },
+                            {
+                                "id": "389585e7-6f0f-4d75-b1ea-38f1bdbdfc48",
+                                "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/389585e7-6f0f-4d75-b1ea-38f1bdbdfc48/v1"
+                            },
+                            {
+                                "id": "3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6",
+                                "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6/v1"
+                            },
+                            {
+                                "id": "7e6ddec2-d796-4d93-b0d2-2d2e98291af9",
+                                "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/7e6ddec2-d796-4d93-b0d2-2d2e98291af9/v1"
+                            },
+                            {
+                                "id": "82b65909-45fd-4f05-bcca-e1a537085756",
+                                "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/82b65909-45fd-4f05-bcca-e1a537085756/v1"
+                            },
+                            {
+                                "id": "ba79e30c-eb3c-4b9a-9159-fb85efeb0864",
+                                "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/ba79e30c-eb3c-4b9a-9159-fb85efeb0864/v1"
+                            },
+                            {
+                                "id": "deec190f-eeea-48dc-af69-f75b9ae06fa4",
+                                "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/deec190f-eeea-48dc-af69-f75b9ae06fa4/v1"
+                            }],
+                            "placeID": "ChIJEfWJLpyluEwR51Du__j-CNQ",
+                            "currency": "CAD",
+                            "distance": 19499,
+                            "largestUnit": {
+                                "width": 3.05,
+                                "length": 5.03
+                            },
+                            "infoVerified": false
+                        },
+                        {
+                            "title": "StorageMart Mini Entrepôts | Clemenceau",
+                            "images": [{
+                                "id": "2862b995-3869-418d-be38-bc31cfcde6c0",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/2862b995-3869-418d-be38-bc31cfcde6c0/v1"
+                            },
+                            {
+                                "id": "370380e5-7f98-4332-8e65-a28aea32535e",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/370380e5-7f98-4332-8e65-a28aea32535e/v1"
+                            },
+                            {
+                                "id": "3e152ce5-1856-4ca8-8077-d1f998401fb5",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/3e152ce5-1856-4ca8-8077-d1f998401fb5/v1"
+                            },
+                            {
+                                "id": "41a399ee-03e1-4816-b2f8-f2305b6cc0a7",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/41a399ee-03e1-4816-b2f8-f2305b6cc0a7/v1"
+                            },
+                            {
+                                "id": "47d39d14-31a3-4407-968b-84c9e318ee94",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/47d39d14-31a3-4407-968b-84c9e318ee94/v1"
+                            },
+                            {
+                                "id": "6e2a5803-9bb5-473d-9b94-21eac4bd43f7",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/6e2a5803-9bb5-473d-9b94-21eac4bd43f7/v1"
+                            },
+                            {
+                                "id": "8bb7604a-f678-42af-9112-08a341f4f2c4",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/8bb7604a-f678-42af-9112-08a341f4f2c4/v1"
+                            },
+                            {
+                                "id": "9834ffb7-ba16-48c4-997b-66d06215ecb4",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/9834ffb7-ba16-48c4-997b-66d06215ecb4/v1"
+                            },
+                            {
+                                "id": "aec43494-3756-414d-9ea0-5a169cbe7c49",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/aec43494-3756-414d-9ea0-5a169cbe7c49/v1"
+                            },
+                            {
+                                "id": "e39b2786-aa54-46a6-ad4b-116d9420182e",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/e39b2786-aa54-46a6-ad4b-116d9420182e/v1"
+                            },
+                            {
+                                "id": "f2d46842-ae8e-4a6d-afcb-77723bf6bbd4",
+                                "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/f2d46842-ae8e-4a6d-afcb-77723bf6bbd4/v1"
+                            }],
+                            "placeID": "ChIJqQxsgTO8uEwRNFWOfPKwNTM",
+                            "currency": "CAD",
+                            "distance": 7235,
+                            "largestUnit": {
+                                "width": 2.44,
+                                "length": 5.49
+                            },
+                            "infoVerified": false
+                        },
+                        {
+                            "title": "Mini Entrepôts Québec inc.",
+                            "images": [{
+                                "id": "00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0",
+                                "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0/v1"
+                            },
+                            {
+                                "id": "59bb1ceb-dd47-4150-81f9-ff43dacccf3c",
+                                "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/59bb1ceb-dd47-4150-81f9-ff43dacccf3c/v1"
+                            },
+                            {
+                                "id": "6a572a41-be7a-45a1-8385-d0b5bd1b7454",
+                                "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6a572a41-be7a-45a1-8385-d0b5bd1b7454/v1"
+                            },
+                            {
+                                "id": "6e142105-5d41-4fdb-9b48-b2bce4bfc8da",
+                                "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6e142105-5d41-4fdb-9b48-b2bce4bfc8da/v1"
+                            },
+                            {
+                                "id": "9f56d769-2475-4868-9bbf-f6e65780877b",
+                                "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/9f56d769-2475-4868-9bbf-f6e65780877b/v1"
+                            },
+                            {
+                                "id": "a7312bba-2ad8-4534-bdd2-fdf536db9bc9",
+                                "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/a7312bba-2ad8-4534-bdd2-fdf536db9bc9/v1"
+                            },
+                            {
+                                "id": "d1acf6a5-2974-4461-9d72-400975759921",
+                                "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/d1acf6a5-2974-4461-9d72-400975759921/v1"
+                            }],
+                            "placeID": "ChIJtSNE3Ru5uEwRrNVhUR9596A",
+                            "currency": "CAD",
+                            "distance": 18319,
+                            "largestUnit": {
+                                "width": 3.05,
+                                "length": 6.1
+                            },
+                            "infoVerified": false
+                        },
+                        {
+                            "title": "Mini Entreposage Quebec | Limoilou",
+                            "images": [{
+                                "id": "5c462c09-c614-4f68-a0c5-9769d2d93eba",
+                                "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/5c462c09-c614-4f68-a0c5-9769d2d93eba/v1"
+                            },
+                            {
+                                "id": "94cbae40-ab5f-44b3-81e3-215153ede6b8",
+                                "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/94cbae40-ab5f-44b3-81e3-215153ede6b8/v1"
+                            },
+                            {
+                                "id": "f5bd3a80-5470-463f-92a7-da6a179de7fa",
+                                "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/f5bd3a80-5470-463f-92a7-da6a179de7fa/v1"
+                            }],
+                            "placeID": "ChIJ2VVKsE2XuEwRtifAnaZsNXQ",
+                            "currency": "CAD",
+                            "distance": 1661,
+                            "largestUnit": {
+                                "width": 3.05,
+                                "length": 7.62
+                            },
+                            "infoVerified": false
+                        }]
+                    },
+                    "discounts": {
+                        "type": "array",
+                        "title": "The discounts Schema",
+                        "items": {},
+                        "examples": [
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            [],
+                            []
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id": "a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31",
+                    "unit": {
+                        "id": "6664d28d-5f0c-4080-9bac-d268466d56bd",
+                        "width": 1.52,
+                        "length": 3.05,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": 117,
+                        "specifications": [
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Entrepôts Modulo",
+                        "images": [{
+                            "id": "21701815-3349-453f-b4fa-8da520bc430f",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/21701815-3349-453f-b4fa-8da520bc430f/v1"
+                        },
+                        {
+                            "id": "2e4b2d86-b79c-4541-9823-5caf63a5719a",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/2e4b2d86-b79c-4541-9823-5caf63a5719a/v1"
+                        },
+                        {
+                            "id": "57b81a06-f117-4412-9def-1dc227e9c630",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/57b81a06-f117-4412-9def-1dc227e9c630/v1"
+                        },
+                        {
+                            "id": "63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b/v1"
+                        },
+                        {
+                            "id": "98636671-29ab-45c2-8f30-9875c9b84873",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/98636671-29ab-45c2-8f30-9875c9b84873/v1"
+                        },
+                        {
+                            "id": "b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae/v1"
+                        }],
+                        "placeID": "ChIJE_fc1siTuEwROmFHZDhQqDY",
+                        "currency": "CAD",
+                        "distance": 9980,
+                        "largestUnit": {
+                            "width": 3.66,
+                            "length": 7.62
+                        },
+                        "infoVerified": true
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "7ec437f9-694a-4811-bbc7-73be300f53e5",
+                    "unit": {
+                        "id": "543203ec-5f2b-4ca8-8504-a3d8e867cdcb",
+                        "width": 1.83,
+                        "length": 3.05,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "electronicKey",
+                            "h24",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Entreposage Québec",
+                        "images": [{
+                            "id": "7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45",
+                            "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45/v1"
+                        },
+                        {
+                            "id": "df01ff4c-af01-4439-a147-576e3472b1fe",
+                            "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/df01ff4c-af01-4439-a147-576e3472b1fe/v1"
+                        },
+                        {
+                            "id": "fba0ff1e-1a00-4106-87ca-7a48dfeee00e",
+                            "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/fba0ff1e-1a00-4106-87ca-7a48dfeee00e/v1"
+                        }],
+                        "placeID": "ChIJRT-7i8WXuEwRwasr3m0VwuY",
+                        "currency": "CAD",
+                        "distance": 3952,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 6.1
+                        },
+                        "infoVerified": true
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "91966261-cc01-4d6e-9f24-cf8db9d36f1a",
+                    "unit": {
+                        "id": "3306aee1-037c-4929-81b8-296a288d3a8a",
+                        "width": 1.52,
+                        "length": 2.13,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "noStairs",
+                            "carAccess",
+                            "electronicKey",
+                            "h24",
+                            "covered",
+                            "outdoor",
+                            "electricity"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Éco-Entrepôts",
+                        "images": [{
+                            "id": "2c104757-8bef-4508-b733-3a95e8367cde",
+                            "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/2c104757-8bef-4508-b733-3a95e8367cde/v1"
+                        },
+                        {
+                            "id": "66957914-bec3-427f-bdc3-e66204eebc0f",
+                            "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/66957914-bec3-427f-bdc3-e66204eebc0f/v1"
+                        }],
+                        "placeID": "ChIJWShZbFGfuEwR-jH2IxjoIAc",
+                        "currency": "CAD",
+                        "distance": 17140,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 9.14
+                        },
+                        "infoVerified": true
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "391f66e4-e2f3-402b-9fcc-2b58e73292d8",
+                    "unit": {
+                        "id": "26dbe9fd-a933-4d4c-817e-753049820a21",
+                        "width": 1.52,
+                        "length": 2.13,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "electronicKey",
+                            "h24",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Mon Locker",
+                        "images": [{
+                            "id": "2031a203-b9dc-4128-b84c-be35b71c1b32",
+                            "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/2031a203-b9dc-4128-b84c-be35b71c1b32/v1"
+                        },
+                        {
+                            "id": "e51954c0-be25-4ee9-a8e7-1026425c18b9",
+                            "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/e51954c0-be25-4ee9-a8e7-1026425c18b9/v1"
+                        }],
+                        "placeID": "ChIJ0Qbr2AObuEwRs77CNRgODW4",
+                        "currency": "CAD",
+                        "distance": 18796,
+                        "largestUnit": {
+                            "width": 3.51,
+                            "length": 4.15
+                        },
+                        "infoVerified": true
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "4b65e629-9064-4923-949f-b821006da5ca",
+                    "unit": {
+                        "id": "35542a85-9b70-4fbe-a7c8-bc8f9a8c0d14",
+                        "width": 2.13,
+                        "length": 2.13,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "h24",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Mini-Entrepôt St-Aug NORD \u0026 SUD",
+                        "images": [{
+                            "id": "0f44865a-5cf4-4c0a-b610-73668306ccb1",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/0f44865a-5cf4-4c0a-b610-73668306ccb1/v1"
+                        },
+                        {
+                            "id": "2590b90e-b48f-491d-930a-e00422b5442a",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/2590b90e-b48f-491d-930a-e00422b5442a/v1"
+                        },
+                        {
+                            "id": "b9c38b49-33b4-49ca-89ea-21be0e3b8de6",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/b9c38b49-33b4-49ca-89ea-21be0e3b8de6/v1"
+                        },
+                        {
+                            "id": "c75cb47f-2f5e-46f4-9a41-1d956caa8e9f",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/c75cb47f-2f5e-46f4-9a41-1d956caa8e9f/v1"
+                        },
+                        {
+                            "id": "ca4ba8eb-0c9f-46de-ba63-897ed1aa0239",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/ca4ba8eb-0c9f-46de-ba63-897ed1aa0239/v1"
+                        },
+                        {
+                            "id": "f7758be4-6706-4251-840a-43934bb8f561",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/f7758be4-6706-4251-840a-43934bb8f561/v1"
+                        }],
+                        "placeID": "ChIJWXnqqKGbuEwRuynvLbUF31Q",
+                        "currency": "CAD",
+                        "distance": 18846,
+                        "largestUnit": {
+                            "width": 2.44,
+                            "length": 7.62
+                        },
+                        "infoVerified": true
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "01cda2c2-bbfe-40b7-a4fb-7590d4e02efe",
+                    "unit": {
+                        "id": "6405db4c-9fe7-499b-89a1-9355389a7375",
+                        "width": 1.52,
+                        "length": 3.05,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "airConditioning",
+                            "electronicKey",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "StorageMart Mini Entrepôts | Jacquard",
+                        "images": [{
+                            "id": "250469a9-2133-4481-887d-645520ffa8fb",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/250469a9-2133-4481-887d-645520ffa8fb/v1"
+                        },
+                        {
+                            "id": "61a1b23c-231d-438f-944f-d13a08af7a57",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/61a1b23c-231d-438f-944f-d13a08af7a57/v1"
+                        },
+                        {
+                            "id": "62f6f540-bee0-48bc-b139-60fbca64c272",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/62f6f540-bee0-48bc-b139-60fbca64c272/v1"
+                        },
+                        {
+                            "id": "708349ce-c510-44af-9ac8-af28a15e829d",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/708349ce-c510-44af-9ac8-af28a15e829d/v1"
+                        },
+                        {
+                            "id": "7beac466-5867-45ce-bc3f-ff89501c591d",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/7beac466-5867-45ce-bc3f-ff89501c591d/v1"
+                        },
+                        {
+                            "id": "8b21e452-0b6e-40e4-be3e-1913370fa49d",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/8b21e452-0b6e-40e4-be3e-1913370fa49d/v1"
+                        },
+                        {
+                            "id": "d23d9bfb-4b96-43c0-97c9-be9d2937e102",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/d23d9bfb-4b96-43c0-97c9-be9d2937e102/v1"
+                        },
+                        {
+                            "id": "ea270198-074c-412d-95b6-968c698d0817",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/ea270198-074c-412d-95b6-968c698d0817/v1"
+                        }],
+                        "placeID": "ChIJH88yyQKXuEwRFZMQbU00eeM",
+                        "currency": "CAD",
+                        "distance": 6021,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 9.14
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "d95ca4b9-e941-4a92-a002-8b3a745e14ea",
+                    "unit": {
+                        "id": "573dbc29-e25b-41d6-94df-0e6549523b98",
+                        "width": 1.52,
+                        "length": 3.05,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "noStairs",
+                            "electronicKey",
+                            "h24",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "StorageMart Mini Entrepôts | Galvani",
+                        "images": [{
+                            "id": "0d6f0edf-f6e7-4d98-a608-888a9c5def3d",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/0d6f0edf-f6e7-4d98-a608-888a9c5def3d/v1"
+                        },
+                        {
+                            "id": "1034a100-ac60-44f5-98a7-95e0b502d1d5",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/1034a100-ac60-44f5-98a7-95e0b502d1d5/v1"
+                        },
+                        {
+                            "id": "4af55b29-2dd7-4fa0-904d-d2f7892e867c",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/4af55b29-2dd7-4fa0-904d-d2f7892e867c/v1"
+                        },
+                        {
+                            "id": "a8dfc724-6ac6-4573-9327-79a9a3a15256",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/a8dfc724-6ac6-4573-9327-79a9a3a15256/v1"
+                        },
+                        {
+                            "id": "b41e9fd4-c46f-4bdb-8a08-84bbd341bdad",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/b41e9fd4-c46f-4bdb-8a08-84bbd341bdad/v1"
+                        },
+                        {
+                            "id": "d7ba4174-527f-45a6-86c2-1f3c821ac1df",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/d7ba4174-527f-45a6-86c2-1f3c821ac1df/v1"
+                        }],
+                        "placeID": "ChIJw24ms-GWuEwRMlJpTvDZ6I0",
+                        "currency": "CAD",
+                        "distance": 6834,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 3.05
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "324cbac8-a1f8-403b-8c19-001de3c67447",
+                    "unit": {
+                        "id": "31155dfe-26ad-4747-82f2-41ed3dbe17c6",
+                        "width": 3.05,
+                        "length": 5.03,
+                        "vehicles": [
+                            "motorcycle",
+                            "car",
+                            "rv",
+                            "boat"
+                        ],
+                        "storageType": "parking",
+                        "regularPrice": null,
+                        "specifications": [
+                            "h24",
+                            "covered",
+                            "outdoor"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Entreposage du Moulin",
+                        "images": [{
+                            "id": "158300f1-9438-4e80-87fa-d63ca25cbbdc",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/158300f1-9438-4e80-87fa-d63ca25cbbdc/v1"
+                        },
+                        {
+                            "id": "33abcc3f-b1da-43e0-a950-0de5b0306b4c",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/33abcc3f-b1da-43e0-a950-0de5b0306b4c/v1"
+                        },
+                        {
+                            "id": "389585e7-6f0f-4d75-b1ea-38f1bdbdfc48",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/389585e7-6f0f-4d75-b1ea-38f1bdbdfc48/v1"
+                        },
+                        {
+                            "id": "3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6/v1"
+                        },
+                        {
+                            "id": "7e6ddec2-d796-4d93-b0d2-2d2e98291af9",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/7e6ddec2-d796-4d93-b0d2-2d2e98291af9/v1"
+                        },
+                        {
+                            "id": "82b65909-45fd-4f05-bcca-e1a537085756",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/82b65909-45fd-4f05-bcca-e1a537085756/v1"
+                        },
+                        {
+                            "id": "ba79e30c-eb3c-4b9a-9159-fb85efeb0864",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/ba79e30c-eb3c-4b9a-9159-fb85efeb0864/v1"
+                        },
+                        {
+                            "id": "deec190f-eeea-48dc-af69-f75b9ae06fa4",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/deec190f-eeea-48dc-af69-f75b9ae06fa4/v1"
+                        }],
+                        "placeID": "ChIJEfWJLpyluEwR51Du__j-CNQ",
+                        "currency": "CAD",
+                        "distance": 19499,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 5.03
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "645a84dd-43bf-46f4-a0af-28d2fee2fbf6",
+                    "unit": {
+                        "id": "23c27be0-920a-4950-8465-2eee675b6788",
+                        "width": 2.44,
+                        "length": 5.49,
+                        "vehicles": [
+                            "motorcycle",
+                            "car",
+                            "rv",
+                            "boat"
+                        ],
+                        "storageType": "parking",
+                        "regularPrice": null,
+                        "specifications": [
+                            "noStairs",
+                            "h24",
+                            "notCovered",
+                            "outdoor"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "StorageMart Mini Entrepôts | Clemenceau",
+                        "images": [{
+                            "id": "2862b995-3869-418d-be38-bc31cfcde6c0",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/2862b995-3869-418d-be38-bc31cfcde6c0/v1"
+                        },
+                        {
+                            "id": "370380e5-7f98-4332-8e65-a28aea32535e",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/370380e5-7f98-4332-8e65-a28aea32535e/v1"
+                        },
+                        {
+                            "id": "3e152ce5-1856-4ca8-8077-d1f998401fb5",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/3e152ce5-1856-4ca8-8077-d1f998401fb5/v1"
+                        },
+                        {
+                            "id": "41a399ee-03e1-4816-b2f8-f2305b6cc0a7",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/41a399ee-03e1-4816-b2f8-f2305b6cc0a7/v1"
+                        },
+                        {
+                            "id": "47d39d14-31a3-4407-968b-84c9e318ee94",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/47d39d14-31a3-4407-968b-84c9e318ee94/v1"
+                        },
+                        {
+                            "id": "6e2a5803-9bb5-473d-9b94-21eac4bd43f7",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/6e2a5803-9bb5-473d-9b94-21eac4bd43f7/v1"
+                        },
+                        {
+                            "id": "8bb7604a-f678-42af-9112-08a341f4f2c4",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/8bb7604a-f678-42af-9112-08a341f4f2c4/v1"
+                        },
+                        {
+                            "id": "9834ffb7-ba16-48c4-997b-66d06215ecb4",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/9834ffb7-ba16-48c4-997b-66d06215ecb4/v1"
+                        },
+                        {
+                            "id": "aec43494-3756-414d-9ea0-5a169cbe7c49",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/aec43494-3756-414d-9ea0-5a169cbe7c49/v1"
+                        },
+                        {
+                            "id": "e39b2786-aa54-46a6-ad4b-116d9420182e",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/e39b2786-aa54-46a6-ad4b-116d9420182e/v1"
+                        },
+                        {
+                            "id": "f2d46842-ae8e-4a6d-afcb-77723bf6bbd4",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/f2d46842-ae8e-4a6d-afcb-77723bf6bbd4/v1"
+                        }],
+                        "placeID": "ChIJqQxsgTO8uEwRNFWOfPKwNTM",
+                        "currency": "CAD",
+                        "distance": 7235,
+                        "largestUnit": {
+                            "width": 2.44,
+                            "length": 5.49
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "7136e99a-7aba-425b-b5e4-df4cba2cbc3e",
+                    "unit": {
+                        "id": "3b56f883-3094-455c-88dc-bc6dfe60aa16",
+                        "width": 1.22,
+                        "length": 2.13,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "h24",
+                            "covered",
+                            "outdoor"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Mini Entrepôts Québec inc.",
+                        "images": [{
+                            "id": "00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0/v1"
+                        },
+                        {
+                            "id": "59bb1ceb-dd47-4150-81f9-ff43dacccf3c",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/59bb1ceb-dd47-4150-81f9-ff43dacccf3c/v1"
+                        },
+                        {
+                            "id": "6a572a41-be7a-45a1-8385-d0b5bd1b7454",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6a572a41-be7a-45a1-8385-d0b5bd1b7454/v1"
+                        },
+                        {
+                            "id": "6e142105-5d41-4fdb-9b48-b2bce4bfc8da",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6e142105-5d41-4fdb-9b48-b2bce4bfc8da/v1"
+                        },
+                        {
+                            "id": "9f56d769-2475-4868-9bbf-f6e65780877b",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/9f56d769-2475-4868-9bbf-f6e65780877b/v1"
+                        },
+                        {
+                            "id": "a7312bba-2ad8-4534-bdd2-fdf536db9bc9",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/a7312bba-2ad8-4534-bdd2-fdf536db9bc9/v1"
+                        },
+                        {
+                            "id": "d1acf6a5-2974-4461-9d72-400975759921",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/d1acf6a5-2974-4461-9d72-400975759921/v1"
+                        }],
+                        "placeID": "ChIJtSNE3Ru5uEwRrNVhUR9596A",
+                        "currency": "CAD",
+                        "distance": 18319,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 6.1
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "bea8953b-eda3-4bf3-bef8-1963433dbe4c",
+                    "unit": {
+                        "id": "27f7ab18-3eae-45f6-8c12-cfaafb6232f4",
+                        "width": 1.83,
+                        "length": 1.83,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "airConditioning",
+                            "noStairs",
+                            "electronicKey",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Mini Entreposage Quebec | Limoilou",
+                        "images": [{
+                            "id": "5c462c09-c614-4f68-a0c5-9769d2d93eba",
+                            "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/5c462c09-c614-4f68-a0c5-9769d2d93eba/v1"
+                        },
+                        {
+                            "id": "94cbae40-ab5f-44b3-81e3-215153ede6b8",
+                            "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/94cbae40-ab5f-44b3-81e3-215153ede6b8/v1"
+                        },
+                        {
+                            "id": "f5bd3a80-5470-463f-92a7-da6a179de7fa",
+                            "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/f5bd3a80-5470-463f-92a7-da6a179de7fa/v1"
+                        }],
+                        "placeID": "ChIJ2VVKsE2XuEwRtifAnaZsNXQ",
+                        "currency": "CAD",
+                        "distance": 1661,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 7.62
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                }]
+            },
+            "examples": [
+                [{
+                    "id": "a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31",
+                    "unit": {
+                        "id": "6664d28d-5f0c-4080-9bac-d268466d56bd",
+                        "width": 1.52,
+                        "length": 3.05,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": 117,
+                        "specifications": [
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Entrepôts Modulo",
+                        "images": [{
+                            "id": "21701815-3349-453f-b4fa-8da520bc430f",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/21701815-3349-453f-b4fa-8da520bc430f/v1"
+                        },
+                        {
+                            "id": "2e4b2d86-b79c-4541-9823-5caf63a5719a",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/2e4b2d86-b79c-4541-9823-5caf63a5719a/v1"
+                        },
+                        {
+                            "id": "57b81a06-f117-4412-9def-1dc227e9c630",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/57b81a06-f117-4412-9def-1dc227e9c630/v1"
+                        },
+                        {
+                            "id": "63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b/v1"
+                        },
+                        {
+                            "id": "98636671-29ab-45c2-8f30-9875c9b84873",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/98636671-29ab-45c2-8f30-9875c9b84873/v1"
+                        },
+                        {
+                            "id": "b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae",
+                            "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae/v1"
+                        }],
+                        "placeID": "ChIJE_fc1siTuEwROmFHZDhQqDY",
+                        "currency": "CAD",
+                        "distance": 9980,
+                        "largestUnit": {
+                            "width": 3.66,
+                            "length": 7.62
+                        },
+                        "infoVerified": true
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "7ec437f9-694a-4811-bbc7-73be300f53e5",
+                    "unit": {
+                        "id": "543203ec-5f2b-4ca8-8504-a3d8e867cdcb",
+                        "width": 1.83,
+                        "length": 3.05,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "electronicKey",
+                            "h24",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Entreposage Québec",
+                        "images": [{
+                            "id": "7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45",
+                            "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45/v1"
+                        },
+                        {
+                            "id": "df01ff4c-af01-4439-a147-576e3472b1fe",
+                            "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/df01ff4c-af01-4439-a147-576e3472b1fe/v1"
+                        },
+                        {
+                            "id": "fba0ff1e-1a00-4106-87ca-7a48dfeee00e",
+                            "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/fba0ff1e-1a00-4106-87ca-7a48dfeee00e/v1"
+                        }],
+                        "placeID": "ChIJRT-7i8WXuEwRwasr3m0VwuY",
+                        "currency": "CAD",
+                        "distance": 3952,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 6.1
+                        },
+                        "infoVerified": true
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "91966261-cc01-4d6e-9f24-cf8db9d36f1a",
+                    "unit": {
+                        "id": "3306aee1-037c-4929-81b8-296a288d3a8a",
+                        "width": 1.52,
+                        "length": 2.13,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "noStairs",
+                            "carAccess",
+                            "electronicKey",
+                            "h24",
+                            "covered",
+                            "outdoor",
+                            "electricity"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Éco-Entrepôts",
+                        "images": [{
+                            "id": "2c104757-8bef-4508-b733-3a95e8367cde",
+                            "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/2c104757-8bef-4508-b733-3a95e8367cde/v1"
+                        },
+                        {
+                            "id": "66957914-bec3-427f-bdc3-e66204eebc0f",
+                            "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/66957914-bec3-427f-bdc3-e66204eebc0f/v1"
+                        }],
+                        "placeID": "ChIJWShZbFGfuEwR-jH2IxjoIAc",
+                        "currency": "CAD",
+                        "distance": 17140,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 9.14
+                        },
+                        "infoVerified": true
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "391f66e4-e2f3-402b-9fcc-2b58e73292d8",
+                    "unit": {
+                        "id": "26dbe9fd-a933-4d4c-817e-753049820a21",
+                        "width": 1.52,
+                        "length": 2.13,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "electronicKey",
+                            "h24",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Mon Locker",
+                        "images": [{
+                            "id": "2031a203-b9dc-4128-b84c-be35b71c1b32",
+                            "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/2031a203-b9dc-4128-b84c-be35b71c1b32/v1"
+                        },
+                        {
+                            "id": "e51954c0-be25-4ee9-a8e7-1026425c18b9",
+                            "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/e51954c0-be25-4ee9-a8e7-1026425c18b9/v1"
+                        }],
+                        "placeID": "ChIJ0Qbr2AObuEwRs77CNRgODW4",
+                        "currency": "CAD",
+                        "distance": 18796,
+                        "largestUnit": {
+                            "width": 3.51,
+                            "length": 4.15
+                        },
+                        "infoVerified": true
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "4b65e629-9064-4923-949f-b821006da5ca",
+                    "unit": {
+                        "id": "35542a85-9b70-4fbe-a7c8-bc8f9a8c0d14",
+                        "width": 2.13,
+                        "length": 2.13,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "h24",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Mini-Entrepôt St-Aug NORD \u0026 SUD",
+                        "images": [{
+                            "id": "0f44865a-5cf4-4c0a-b610-73668306ccb1",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/0f44865a-5cf4-4c0a-b610-73668306ccb1/v1"
+                        },
+                        {
+                            "id": "2590b90e-b48f-491d-930a-e00422b5442a",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/2590b90e-b48f-491d-930a-e00422b5442a/v1"
+                        },
+                        {
+                            "id": "b9c38b49-33b4-49ca-89ea-21be0e3b8de6",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/b9c38b49-33b4-49ca-89ea-21be0e3b8de6/v1"
+                        },
+                        {
+                            "id": "c75cb47f-2f5e-46f4-9a41-1d956caa8e9f",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/c75cb47f-2f5e-46f4-9a41-1d956caa8e9f/v1"
+                        },
+                        {
+                            "id": "ca4ba8eb-0c9f-46de-ba63-897ed1aa0239",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/ca4ba8eb-0c9f-46de-ba63-897ed1aa0239/v1"
+                        },
+                        {
+                            "id": "f7758be4-6706-4251-840a-43934bb8f561",
+                            "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/f7758be4-6706-4251-840a-43934bb8f561/v1"
+                        }],
+                        "placeID": "ChIJWXnqqKGbuEwRuynvLbUF31Q",
+                        "currency": "CAD",
+                        "distance": 18846,
+                        "largestUnit": {
+                            "width": 2.44,
+                            "length": 7.62
+                        },
+                        "infoVerified": true
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "01cda2c2-bbfe-40b7-a4fb-7590d4e02efe",
+                    "unit": {
+                        "id": "6405db4c-9fe7-499b-89a1-9355389a7375",
+                        "width": 1.52,
+                        "length": 3.05,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "airConditioning",
+                            "electronicKey",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "StorageMart Mini Entrepôts | Jacquard",
+                        "images": [{
+                            "id": "250469a9-2133-4481-887d-645520ffa8fb",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/250469a9-2133-4481-887d-645520ffa8fb/v1"
+                        },
+                        {
+                            "id": "61a1b23c-231d-438f-944f-d13a08af7a57",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/61a1b23c-231d-438f-944f-d13a08af7a57/v1"
+                        },
+                        {
+                            "id": "62f6f540-bee0-48bc-b139-60fbca64c272",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/62f6f540-bee0-48bc-b139-60fbca64c272/v1"
+                        },
+                        {
+                            "id": "708349ce-c510-44af-9ac8-af28a15e829d",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/708349ce-c510-44af-9ac8-af28a15e829d/v1"
+                        },
+                        {
+                            "id": "7beac466-5867-45ce-bc3f-ff89501c591d",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/7beac466-5867-45ce-bc3f-ff89501c591d/v1"
+                        },
+                        {
+                            "id": "8b21e452-0b6e-40e4-be3e-1913370fa49d",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/8b21e452-0b6e-40e4-be3e-1913370fa49d/v1"
+                        },
+                        {
+                            "id": "d23d9bfb-4b96-43c0-97c9-be9d2937e102",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/d23d9bfb-4b96-43c0-97c9-be9d2937e102/v1"
+                        },
+                        {
+                            "id": "ea270198-074c-412d-95b6-968c698d0817",
+                            "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/ea270198-074c-412d-95b6-968c698d0817/v1"
+                        }],
+                        "placeID": "ChIJH88yyQKXuEwRFZMQbU00eeM",
+                        "currency": "CAD",
+                        "distance": 6021,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 9.14
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "d95ca4b9-e941-4a92-a002-8b3a745e14ea",
+                    "unit": {
+                        "id": "573dbc29-e25b-41d6-94df-0e6549523b98",
+                        "width": 1.52,
+                        "length": 3.05,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "noStairs",
+                            "electronicKey",
+                            "h24",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "StorageMart Mini Entrepôts | Galvani",
+                        "images": [{
+                            "id": "0d6f0edf-f6e7-4d98-a608-888a9c5def3d",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/0d6f0edf-f6e7-4d98-a608-888a9c5def3d/v1"
+                        },
+                        {
+                            "id": "1034a100-ac60-44f5-98a7-95e0b502d1d5",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/1034a100-ac60-44f5-98a7-95e0b502d1d5/v1"
+                        },
+                        {
+                            "id": "4af55b29-2dd7-4fa0-904d-d2f7892e867c",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/4af55b29-2dd7-4fa0-904d-d2f7892e867c/v1"
+                        },
+                        {
+                            "id": "a8dfc724-6ac6-4573-9327-79a9a3a15256",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/a8dfc724-6ac6-4573-9327-79a9a3a15256/v1"
+                        },
+                        {
+                            "id": "b41e9fd4-c46f-4bdb-8a08-84bbd341bdad",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/b41e9fd4-c46f-4bdb-8a08-84bbd341bdad/v1"
+                        },
+                        {
+                            "id": "d7ba4174-527f-45a6-86c2-1f3c821ac1df",
+                            "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/d7ba4174-527f-45a6-86c2-1f3c821ac1df/v1"
+                        }],
+                        "placeID": "ChIJw24ms-GWuEwRMlJpTvDZ6I0",
+                        "currency": "CAD",
+                        "distance": 6834,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 3.05
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "324cbac8-a1f8-403b-8c19-001de3c67447",
+                    "unit": {
+                        "id": "31155dfe-26ad-4747-82f2-41ed3dbe17c6",
+                        "width": 3.05,
+                        "length": 5.03,
+                        "vehicles": [
+                            "motorcycle",
+                            "car",
+                            "rv",
+                            "boat"
+                        ],
+                        "storageType": "parking",
+                        "regularPrice": null,
+                        "specifications": [
+                            "h24",
+                            "covered",
+                            "outdoor"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Entreposage du Moulin",
+                        "images": [{
+                            "id": "158300f1-9438-4e80-87fa-d63ca25cbbdc",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/158300f1-9438-4e80-87fa-d63ca25cbbdc/v1"
+                        },
+                        {
+                            "id": "33abcc3f-b1da-43e0-a950-0de5b0306b4c",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/33abcc3f-b1da-43e0-a950-0de5b0306b4c/v1"
+                        },
+                        {
+                            "id": "389585e7-6f0f-4d75-b1ea-38f1bdbdfc48",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/389585e7-6f0f-4d75-b1ea-38f1bdbdfc48/v1"
+                        },
+                        {
+                            "id": "3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6/v1"
+                        },
+                        {
+                            "id": "7e6ddec2-d796-4d93-b0d2-2d2e98291af9",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/7e6ddec2-d796-4d93-b0d2-2d2e98291af9/v1"
+                        },
+                        {
+                            "id": "82b65909-45fd-4f05-bcca-e1a537085756",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/82b65909-45fd-4f05-bcca-e1a537085756/v1"
+                        },
+                        {
+                            "id": "ba79e30c-eb3c-4b9a-9159-fb85efeb0864",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/ba79e30c-eb3c-4b9a-9159-fb85efeb0864/v1"
+                        },
+                        {
+                            "id": "deec190f-eeea-48dc-af69-f75b9ae06fa4",
+                            "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/deec190f-eeea-48dc-af69-f75b9ae06fa4/v1"
+                        }],
+                        "placeID": "ChIJEfWJLpyluEwR51Du__j-CNQ",
+                        "currency": "CAD",
+                        "distance": 19499,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 5.03
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "645a84dd-43bf-46f4-a0af-28d2fee2fbf6",
+                    "unit": {
+                        "id": "23c27be0-920a-4950-8465-2eee675b6788",
+                        "width": 2.44,
+                        "length": 5.49,
+                        "vehicles": [
+                            "motorcycle",
+                            "car",
+                            "rv",
+                            "boat"
+                        ],
+                        "storageType": "parking",
+                        "regularPrice": null,
+                        "specifications": [
+                            "noStairs",
+                            "h24",
+                            "notCovered",
+                            "outdoor"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "StorageMart Mini Entrepôts | Clemenceau",
+                        "images": [{
+                            "id": "2862b995-3869-418d-be38-bc31cfcde6c0",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/2862b995-3869-418d-be38-bc31cfcde6c0/v1"
+                        },
+                        {
+                            "id": "370380e5-7f98-4332-8e65-a28aea32535e",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/370380e5-7f98-4332-8e65-a28aea32535e/v1"
+                        },
+                        {
+                            "id": "3e152ce5-1856-4ca8-8077-d1f998401fb5",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/3e152ce5-1856-4ca8-8077-d1f998401fb5/v1"
+                        },
+                        {
+                            "id": "41a399ee-03e1-4816-b2f8-f2305b6cc0a7",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/41a399ee-03e1-4816-b2f8-f2305b6cc0a7/v1"
+                        },
+                        {
+                            "id": "47d39d14-31a3-4407-968b-84c9e318ee94",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/47d39d14-31a3-4407-968b-84c9e318ee94/v1"
+                        },
+                        {
+                            "id": "6e2a5803-9bb5-473d-9b94-21eac4bd43f7",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/6e2a5803-9bb5-473d-9b94-21eac4bd43f7/v1"
+                        },
+                        {
+                            "id": "8bb7604a-f678-42af-9112-08a341f4f2c4",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/8bb7604a-f678-42af-9112-08a341f4f2c4/v1"
+                        },
+                        {
+                            "id": "9834ffb7-ba16-48c4-997b-66d06215ecb4",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/9834ffb7-ba16-48c4-997b-66d06215ecb4/v1"
+                        },
+                        {
+                            "id": "aec43494-3756-414d-9ea0-5a169cbe7c49",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/aec43494-3756-414d-9ea0-5a169cbe7c49/v1"
+                        },
+                        {
+                            "id": "e39b2786-aa54-46a6-ad4b-116d9420182e",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/e39b2786-aa54-46a6-ad4b-116d9420182e/v1"
+                        },
+                        {
+                            "id": "f2d46842-ae8e-4a6d-afcb-77723bf6bbd4",
+                            "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/f2d46842-ae8e-4a6d-afcb-77723bf6bbd4/v1"
+                        }],
+                        "placeID": "ChIJqQxsgTO8uEwRNFWOfPKwNTM",
+                        "currency": "CAD",
+                        "distance": 7235,
+                        "largestUnit": {
+                            "width": 2.44,
+                            "length": 5.49
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "7136e99a-7aba-425b-b5e4-df4cba2cbc3e",
+                    "unit": {
+                        "id": "3b56f883-3094-455c-88dc-bc6dfe60aa16",
+                        "width": 1.22,
+                        "length": 2.13,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "h24",
+                            "covered",
+                            "outdoor"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Mini Entrepôts Québec inc.",
+                        "images": [{
+                            "id": "00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0/v1"
+                        },
+                        {
+                            "id": "59bb1ceb-dd47-4150-81f9-ff43dacccf3c",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/59bb1ceb-dd47-4150-81f9-ff43dacccf3c/v1"
+                        },
+                        {
+                            "id": "6a572a41-be7a-45a1-8385-d0b5bd1b7454",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6a572a41-be7a-45a1-8385-d0b5bd1b7454/v1"
+                        },
+                        {
+                            "id": "6e142105-5d41-4fdb-9b48-b2bce4bfc8da",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6e142105-5d41-4fdb-9b48-b2bce4bfc8da/v1"
+                        },
+                        {
+                            "id": "9f56d769-2475-4868-9bbf-f6e65780877b",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/9f56d769-2475-4868-9bbf-f6e65780877b/v1"
+                        },
+                        {
+                            "id": "a7312bba-2ad8-4534-bdd2-fdf536db9bc9",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/a7312bba-2ad8-4534-bdd2-fdf536db9bc9/v1"
+                        },
+                        {
+                            "id": "d1acf6a5-2974-4461-9d72-400975759921",
+                            "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/d1acf6a5-2974-4461-9d72-400975759921/v1"
+                        }],
+                        "placeID": "ChIJtSNE3Ru5uEwRrNVhUR9596A",
+                        "currency": "CAD",
+                        "distance": 18319,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 6.1
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                },
+                {
+                    "id": "bea8953b-eda3-4bf3-bef8-1963433dbe4c",
+                    "unit": {
+                        "id": "27f7ab18-3eae-45f6-8c12-cfaafb6232f4",
+                        "width": 1.83,
+                        "length": 1.83,
+                        "vehicles": [],
+                        "storageType": "selfStorage",
+                        "regularPrice": null,
+                        "specifications": [
+                            "heating",
+                            "airConditioning",
+                            "noStairs",
+                            "electronicKey",
+                            "covered"
+                        ],
+                        "discountedPrice": null,
+                        "possiblyVehicle": false
+                    },
+                    "facility": {
+                        "title": "Mini Entreposage Quebec | Limoilou",
+                        "images": [{
+                            "id": "5c462c09-c614-4f68-a0c5-9769d2d93eba",
+                            "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/5c462c09-c614-4f68-a0c5-9769d2d93eba/v1"
+                        },
+                        {
+                            "id": "94cbae40-ab5f-44b3-81e3-215153ede6b8",
+                            "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/94cbae40-ab5f-44b3-81e3-215153ede6b8/v1"
+                        },
+                        {
+                            "id": "f5bd3a80-5470-463f-92a7-da6a179de7fa",
+                            "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/f5bd3a80-5470-463f-92a7-da6a179de7fa/v1"
+                        }],
+                        "placeID": "ChIJ2VVKsE2XuEwRtifAnaZsNXQ",
+                        "currency": "CAD",
+                        "distance": 1661,
+                        "largestUnit": {
+                            "width": 3.05,
+                            "length": 7.62
+                        },
+                        "infoVerified": false
+                    },
+                    "discounts": []
+                }]
+            ]
+        },
+        "nbPages": {
+            "type": "integer",
+            "default": 0,
+            "title": "The nbPages Schema",
+            "examples": [
+                1
+            ]
+        },
+        "nbFacilities": {
+            "type": "integer",
+            "default": 0,
+            "title": "The nbFacilities Schema",
+            "examples": [
+                11
+            ]
+        }
+    },
+    "examples": [{
+        "primary": [{
+            "id": "a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31",
+            "unit": {
+                "id": "6664d28d-5f0c-4080-9bac-d268466d56bd",
+                "width": 1.52,
+                "length": 3.05,
+                "vehicles": [],
+                "storageType": "selfStorage",
+                "regularPrice": 117,
+                "specifications": [
+                    "covered"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "Entrepôts Modulo",
+                "images": [{
+                    "id": "21701815-3349-453f-b4fa-8da520bc430f",
+                    "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/21701815-3349-453f-b4fa-8da520bc430f/v1"
+                },
+                {
+                    "id": "2e4b2d86-b79c-4541-9823-5caf63a5719a",
+                    "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/2e4b2d86-b79c-4541-9823-5caf63a5719a/v1"
+                },
+                {
+                    "id": "57b81a06-f117-4412-9def-1dc227e9c630",
+                    "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/57b81a06-f117-4412-9def-1dc227e9c630/v1"
+                },
+                {
+                    "id": "63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b",
+                    "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/63bf9d29-8171-4ea5-b56f-8b0b32d0eb2b/v1"
+                },
+                {
+                    "id": "98636671-29ab-45c2-8f30-9875c9b84873",
+                    "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/98636671-29ab-45c2-8f30-9875c9b84873/v1"
+                },
+                {
+                    "id": "b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae",
+                    "key": "prod/facilities/a96fefc4-b5d4-4ed9-ad62-3b43b9aa9e31/b7cf81ad-1639-4e5c-931e-bc7b6c8cd1ae/v1"
+                }],
+                "placeID": "ChIJE_fc1siTuEwROmFHZDhQqDY",
+                "currency": "CAD",
+                "distance": 9980,
+                "largestUnit": {
+                    "width": 3.66,
+                    "length": 7.62
+                },
+                "infoVerified": true
+            },
+            "discounts": []
+        },
+        {
+            "id": "7ec437f9-694a-4811-bbc7-73be300f53e5",
+            "unit": {
+                "id": "543203ec-5f2b-4ca8-8504-a3d8e867cdcb",
+                "width": 1.83,
+                "length": 3.05,
+                "vehicles": [],
+                "storageType": "selfStorage",
+                "regularPrice": null,
+                "specifications": [
+                    "heating",
+                    "electronicKey",
+                    "h24",
+                    "covered"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "Entreposage Québec",
+                "images": [{
+                    "id": "7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45",
+                    "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/7bcfb8a4-a4df-4db9-aba7-6b0705ad3f45/v1"
+                },
+                {
+                    "id": "df01ff4c-af01-4439-a147-576e3472b1fe",
+                    "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/df01ff4c-af01-4439-a147-576e3472b1fe/v1"
+                },
+                {
+                    "id": "fba0ff1e-1a00-4106-87ca-7a48dfeee00e",
+                    "key": "prod/facilities/7ec437f9-694a-4811-bbc7-73be300f53e5/fba0ff1e-1a00-4106-87ca-7a48dfeee00e/v1"
+                }],
+                "placeID": "ChIJRT-7i8WXuEwRwasr3m0VwuY",
+                "currency": "CAD",
+                "distance": 3952,
+                "largestUnit": {
+                    "width": 3.05,
+                    "length": 6.1
+                },
+                "infoVerified": true
+            },
+            "discounts": []
+        },
+        {
+            "id": "91966261-cc01-4d6e-9f24-cf8db9d36f1a",
+            "unit": {
+                "id": "3306aee1-037c-4929-81b8-296a288d3a8a",
+                "width": 1.52,
+                "length": 2.13,
+                "vehicles": [],
+                "storageType": "selfStorage",
+                "regularPrice": null,
+                "specifications": [
+                    "heating",
+                    "noStairs",
+                    "carAccess",
+                    "electronicKey",
+                    "h24",
+                    "covered",
+                    "outdoor",
+                    "electricity"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "Éco-Entrepôts",
+                "images": [{
+                    "id": "2c104757-8bef-4508-b733-3a95e8367cde",
+                    "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/2c104757-8bef-4508-b733-3a95e8367cde/v1"
+                },
+                {
+                    "id": "66957914-bec3-427f-bdc3-e66204eebc0f",
+                    "key": "prod/facilities/91966261-cc01-4d6e-9f24-cf8db9d36f1a/66957914-bec3-427f-bdc3-e66204eebc0f/v1"
+                }],
+                "placeID": "ChIJWShZbFGfuEwR-jH2IxjoIAc",
+                "currency": "CAD",
+                "distance": 17140,
+                "largestUnit": {
+                    "width": 3.05,
+                    "length": 9.14
+                },
+                "infoVerified": true
+            },
+            "discounts": []
+        },
+        {
+            "id": "391f66e4-e2f3-402b-9fcc-2b58e73292d8",
+            "unit": {
+                "id": "26dbe9fd-a933-4d4c-817e-753049820a21",
+                "width": 1.52,
+                "length": 2.13,
+                "vehicles": [],
+                "storageType": "selfStorage",
+                "regularPrice": null,
+                "specifications": [
+                    "heating",
+                    "electronicKey",
+                    "h24",
+                    "covered"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "Mon Locker",
+                "images": [{
+                    "id": "2031a203-b9dc-4128-b84c-be35b71c1b32",
+                    "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/2031a203-b9dc-4128-b84c-be35b71c1b32/v1"
+                },
+                {
+                    "id": "e51954c0-be25-4ee9-a8e7-1026425c18b9",
+                    "key": "prod/facilities/391f66e4-e2f3-402b-9fcc-2b58e73292d8/e51954c0-be25-4ee9-a8e7-1026425c18b9/v1"
+                }],
+                "placeID": "ChIJ0Qbr2AObuEwRs77CNRgODW4",
+                "currency": "CAD",
+                "distance": 18796,
+                "largestUnit": {
+                    "width": 3.51,
+                    "length": 4.15
+                },
+                "infoVerified": true
+            },
+            "discounts": []
+        },
+        {
+            "id": "4b65e629-9064-4923-949f-b821006da5ca",
+            "unit": {
+                "id": "35542a85-9b70-4fbe-a7c8-bc8f9a8c0d14",
+                "width": 2.13,
+                "length": 2.13,
+                "vehicles": [],
+                "storageType": "selfStorage",
+                "regularPrice": null,
+                "specifications": [
+                    "h24",
+                    "covered"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "Mini-Entrepôt St-Aug NORD \u0026 SUD",
+                "images": [{
+                    "id": "0f44865a-5cf4-4c0a-b610-73668306ccb1",
+                    "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/0f44865a-5cf4-4c0a-b610-73668306ccb1/v1"
+                },
+                {
+                    "id": "2590b90e-b48f-491d-930a-e00422b5442a",
+                    "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/2590b90e-b48f-491d-930a-e00422b5442a/v1"
+                },
+                {
+                    "id": "b9c38b49-33b4-49ca-89ea-21be0e3b8de6",
+                    "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/b9c38b49-33b4-49ca-89ea-21be0e3b8de6/v1"
+                },
+                {
+                    "id": "c75cb47f-2f5e-46f4-9a41-1d956caa8e9f",
+                    "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/c75cb47f-2f5e-46f4-9a41-1d956caa8e9f/v1"
+                },
+                {
+                    "id": "ca4ba8eb-0c9f-46de-ba63-897ed1aa0239",
+                    "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/ca4ba8eb-0c9f-46de-ba63-897ed1aa0239/v1"
+                },
+                {
+                    "id": "f7758be4-6706-4251-840a-43934bb8f561",
+                    "key": "prod/facilities/4b65e629-9064-4923-949f-b821006da5ca/f7758be4-6706-4251-840a-43934bb8f561/v1"
+                }],
+                "placeID": "ChIJWXnqqKGbuEwRuynvLbUF31Q",
+                "currency": "CAD",
+                "distance": 18846,
+                "largestUnit": {
+                    "width": 2.44,
+                    "length": 7.62
+                },
+                "infoVerified": true
+            },
+            "discounts": []
+        },
+        {
+            "id": "01cda2c2-bbfe-40b7-a4fb-7590d4e02efe",
+            "unit": {
+                "id": "6405db4c-9fe7-499b-89a1-9355389a7375",
+                "width": 1.52,
+                "length": 3.05,
+                "vehicles": [],
+                "storageType": "selfStorage",
+                "regularPrice": null,
+                "specifications": [
+                    "heating",
+                    "airConditioning",
+                    "electronicKey",
+                    "covered"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "StorageMart Mini Entrepôts | Jacquard",
+                "images": [{
+                    "id": "250469a9-2133-4481-887d-645520ffa8fb",
+                    "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/250469a9-2133-4481-887d-645520ffa8fb/v1"
+                },
+                {
+                    "id": "61a1b23c-231d-438f-944f-d13a08af7a57",
+                    "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/61a1b23c-231d-438f-944f-d13a08af7a57/v1"
+                },
+                {
+                    "id": "62f6f540-bee0-48bc-b139-60fbca64c272",
+                    "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/62f6f540-bee0-48bc-b139-60fbca64c272/v1"
+                },
+                {
+                    "id": "708349ce-c510-44af-9ac8-af28a15e829d",
+                    "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/708349ce-c510-44af-9ac8-af28a15e829d/v1"
+                },
+                {
+                    "id": "7beac466-5867-45ce-bc3f-ff89501c591d",
+                    "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/7beac466-5867-45ce-bc3f-ff89501c591d/v1"
+                },
+                {
+                    "id": "8b21e452-0b6e-40e4-be3e-1913370fa49d",
+                    "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/8b21e452-0b6e-40e4-be3e-1913370fa49d/v1"
+                },
+                {
+                    "id": "d23d9bfb-4b96-43c0-97c9-be9d2937e102",
+                    "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/d23d9bfb-4b96-43c0-97c9-be9d2937e102/v1"
+                },
+                {
+                    "id": "ea270198-074c-412d-95b6-968c698d0817",
+                    "key": "prod/facilities/01cda2c2-bbfe-40b7-a4fb-7590d4e02efe/ea270198-074c-412d-95b6-968c698d0817/v1"
+                }],
+                "placeID": "ChIJH88yyQKXuEwRFZMQbU00eeM",
+                "currency": "CAD",
+                "distance": 6021,
+                "largestUnit": {
+                    "width": 3.05,
+                    "length": 9.14
+                },
+                "infoVerified": false
+            },
+            "discounts": []
+        },
+        {
+            "id": "d95ca4b9-e941-4a92-a002-8b3a745e14ea",
+            "unit": {
+                "id": "573dbc29-e25b-41d6-94df-0e6549523b98",
+                "width": 1.52,
+                "length": 3.05,
+                "vehicles": [],
+                "storageType": "selfStorage",
+                "regularPrice": null,
+                "specifications": [
+                    "heating",
+                    "noStairs",
+                    "electronicKey",
+                    "h24",
+                    "covered"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "StorageMart Mini Entrepôts | Galvani",
+                "images": [{
+                    "id": "0d6f0edf-f6e7-4d98-a608-888a9c5def3d",
+                    "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/0d6f0edf-f6e7-4d98-a608-888a9c5def3d/v1"
+                },
+                {
+                    "id": "1034a100-ac60-44f5-98a7-95e0b502d1d5",
+                    "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/1034a100-ac60-44f5-98a7-95e0b502d1d5/v1"
+                },
+                {
+                    "id": "4af55b29-2dd7-4fa0-904d-d2f7892e867c",
+                    "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/4af55b29-2dd7-4fa0-904d-d2f7892e867c/v1"
+                },
+                {
+                    "id": "a8dfc724-6ac6-4573-9327-79a9a3a15256",
+                    "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/a8dfc724-6ac6-4573-9327-79a9a3a15256/v1"
+                },
+                {
+                    "id": "b41e9fd4-c46f-4bdb-8a08-84bbd341bdad",
+                    "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/b41e9fd4-c46f-4bdb-8a08-84bbd341bdad/v1"
+                },
+                {
+                    "id": "d7ba4174-527f-45a6-86c2-1f3c821ac1df",
+                    "key": "prod/facilities/d95ca4b9-e941-4a92-a002-8b3a745e14ea/d7ba4174-527f-45a6-86c2-1f3c821ac1df/v1"
+                }],
+                "placeID": "ChIJw24ms-GWuEwRMlJpTvDZ6I0",
+                "currency": "CAD",
+                "distance": 6834,
+                "largestUnit": {
+                    "width": 3.05,
+                    "length": 3.05
+                },
+                "infoVerified": false
+            },
+            "discounts": []
+        },
+        {
+            "id": "324cbac8-a1f8-403b-8c19-001de3c67447",
+            "unit": {
+                "id": "31155dfe-26ad-4747-82f2-41ed3dbe17c6",
+                "width": 3.05,
+                "length": 5.03,
+                "vehicles": [
+                    "motorcycle",
+                    "car",
+                    "rv",
+                    "boat"
+                ],
+                "storageType": "parking",
+                "regularPrice": null,
+                "specifications": [
+                    "h24",
+                    "covered",
+                    "outdoor"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "Entreposage du Moulin",
+                "images": [{
+                    "id": "158300f1-9438-4e80-87fa-d63ca25cbbdc",
+                    "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/158300f1-9438-4e80-87fa-d63ca25cbbdc/v1"
+                },
+                {
+                    "id": "33abcc3f-b1da-43e0-a950-0de5b0306b4c",
+                    "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/33abcc3f-b1da-43e0-a950-0de5b0306b4c/v1"
+                },
+                {
+                    "id": "389585e7-6f0f-4d75-b1ea-38f1bdbdfc48",
+                    "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/389585e7-6f0f-4d75-b1ea-38f1bdbdfc48/v1"
+                },
+                {
+                    "id": "3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6",
+                    "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/3897d7ae-b05e-4dd1-8bf8-ae3f0278e3e6/v1"
+                },
+                {
+                    "id": "7e6ddec2-d796-4d93-b0d2-2d2e98291af9",
+                    "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/7e6ddec2-d796-4d93-b0d2-2d2e98291af9/v1"
+                },
+                {
+                    "id": "82b65909-45fd-4f05-bcca-e1a537085756",
+                    "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/82b65909-45fd-4f05-bcca-e1a537085756/v1"
+                },
+                {
+                    "id": "ba79e30c-eb3c-4b9a-9159-fb85efeb0864",
+                    "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/ba79e30c-eb3c-4b9a-9159-fb85efeb0864/v1"
+                },
+                {
+                    "id": "deec190f-eeea-48dc-af69-f75b9ae06fa4",
+                    "key": "prod/facilities/324cbac8-a1f8-403b-8c19-001de3c67447/deec190f-eeea-48dc-af69-f75b9ae06fa4/v1"
+                }],
+                "placeID": "ChIJEfWJLpyluEwR51Du__j-CNQ",
+                "currency": "CAD",
+                "distance": 19499,
+                "largestUnit": {
+                    "width": 3.05,
+                    "length": 5.03
+                },
+                "infoVerified": false
+            },
+            "discounts": []
+        },
+        {
+            "id": "645a84dd-43bf-46f4-a0af-28d2fee2fbf6",
+            "unit": {
+                "id": "23c27be0-920a-4950-8465-2eee675b6788",
+                "width": 2.44,
+                "length": 5.49,
+                "vehicles": [
+                    "motorcycle",
+                    "car",
+                    "rv",
+                    "boat"
+                ],
+                "storageType": "parking",
+                "regularPrice": null,
+                "specifications": [
+                    "noStairs",
+                    "h24",
+                    "notCovered",
+                    "outdoor"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "StorageMart Mini Entrepôts | Clemenceau",
+                "images": [{
+                    "id": "2862b995-3869-418d-be38-bc31cfcde6c0",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/2862b995-3869-418d-be38-bc31cfcde6c0/v1"
+                },
+                {
+                    "id": "370380e5-7f98-4332-8e65-a28aea32535e",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/370380e5-7f98-4332-8e65-a28aea32535e/v1"
+                },
+                {
+                    "id": "3e152ce5-1856-4ca8-8077-d1f998401fb5",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/3e152ce5-1856-4ca8-8077-d1f998401fb5/v1"
+                },
+                {
+                    "id": "41a399ee-03e1-4816-b2f8-f2305b6cc0a7",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/41a399ee-03e1-4816-b2f8-f2305b6cc0a7/v1"
+                },
+                {
+                    "id": "47d39d14-31a3-4407-968b-84c9e318ee94",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/47d39d14-31a3-4407-968b-84c9e318ee94/v1"
+                },
+                {
+                    "id": "6e2a5803-9bb5-473d-9b94-21eac4bd43f7",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/6e2a5803-9bb5-473d-9b94-21eac4bd43f7/v1"
+                },
+                {
+                    "id": "8bb7604a-f678-42af-9112-08a341f4f2c4",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/8bb7604a-f678-42af-9112-08a341f4f2c4/v1"
+                },
+                {
+                    "id": "9834ffb7-ba16-48c4-997b-66d06215ecb4",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/9834ffb7-ba16-48c4-997b-66d06215ecb4/v1"
+                },
+                {
+                    "id": "aec43494-3756-414d-9ea0-5a169cbe7c49",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/aec43494-3756-414d-9ea0-5a169cbe7c49/v1"
+                },
+                {
+                    "id": "e39b2786-aa54-46a6-ad4b-116d9420182e",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/e39b2786-aa54-46a6-ad4b-116d9420182e/v1"
+                },
+                {
+                    "id": "f2d46842-ae8e-4a6d-afcb-77723bf6bbd4",
+                    "key": "prod/facilities/645a84dd-43bf-46f4-a0af-28d2fee2fbf6/f2d46842-ae8e-4a6d-afcb-77723bf6bbd4/v1"
+                }],
+                "placeID": "ChIJqQxsgTO8uEwRNFWOfPKwNTM",
+                "currency": "CAD",
+                "distance": 7235,
+                "largestUnit": {
+                    "width": 2.44,
+                    "length": 5.49
+                },
+                "infoVerified": false
+            },
+            "discounts": []
+        },
+        {
+            "id": "7136e99a-7aba-425b-b5e4-df4cba2cbc3e",
+            "unit": {
+                "id": "3b56f883-3094-455c-88dc-bc6dfe60aa16",
+                "width": 1.22,
+                "length": 2.13,
+                "vehicles": [],
+                "storageType": "selfStorage",
+                "regularPrice": null,
+                "specifications": [
+                    "heating",
+                    "h24",
+                    "covered",
+                    "outdoor"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "Mini Entrepôts Québec inc.",
+                "images": [{
+                    "id": "00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0",
+                    "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/00f6d7aa-9e99-4e47-9dd4-922d7ecd08b0/v1"
+                },
+                {
+                    "id": "59bb1ceb-dd47-4150-81f9-ff43dacccf3c",
+                    "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/59bb1ceb-dd47-4150-81f9-ff43dacccf3c/v1"
+                },
+                {
+                    "id": "6a572a41-be7a-45a1-8385-d0b5bd1b7454",
+                    "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6a572a41-be7a-45a1-8385-d0b5bd1b7454/v1"
+                },
+                {
+                    "id": "6e142105-5d41-4fdb-9b48-b2bce4bfc8da",
+                    "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/6e142105-5d41-4fdb-9b48-b2bce4bfc8da/v1"
+                },
+                {
+                    "id": "9f56d769-2475-4868-9bbf-f6e65780877b",
+                    "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/9f56d769-2475-4868-9bbf-f6e65780877b/v1"
+                },
+                {
+                    "id": "a7312bba-2ad8-4534-bdd2-fdf536db9bc9",
+                    "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/a7312bba-2ad8-4534-bdd2-fdf536db9bc9/v1"
+                },
+                {
+                    "id": "d1acf6a5-2974-4461-9d72-400975759921",
+                    "key": "prod/facilities/7136e99a-7aba-425b-b5e4-df4cba2cbc3e/d1acf6a5-2974-4461-9d72-400975759921/v1"
+                }],
+                "placeID": "ChIJtSNE3Ru5uEwRrNVhUR9596A",
+                "currency": "CAD",
+                "distance": 18319,
+                "largestUnit": {
+                    "width": 3.05,
+                    "length": 6.1
+                },
+                "infoVerified": false
+            },
+            "discounts": []
+        },
+        {
+            "id": "bea8953b-eda3-4bf3-bef8-1963433dbe4c",
+            "unit": {
+                "id": "27f7ab18-3eae-45f6-8c12-cfaafb6232f4",
+                "width": 1.83,
+                "length": 1.83,
+                "vehicles": [],
+                "storageType": "selfStorage",
+                "regularPrice": null,
+                "specifications": [
+                    "heating",
+                    "airConditioning",
+                    "noStairs",
+                    "electronicKey",
+                    "covered"
+                ],
+                "discountedPrice": null,
+                "possiblyVehicle": false
+            },
+            "facility": {
+                "title": "Mini Entreposage Quebec | Limoilou",
+                "images": [{
+                    "id": "5c462c09-c614-4f68-a0c5-9769d2d93eba",
+                    "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/5c462c09-c614-4f68-a0c5-9769d2d93eba/v1"
+                },
+                {
+                    "id": "94cbae40-ab5f-44b3-81e3-215153ede6b8",
+                    "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/94cbae40-ab5f-44b3-81e3-215153ede6b8/v1"
+                },
+                {
+                    "id": "f5bd3a80-5470-463f-92a7-da6a179de7fa",
+                    "key": "prod/facilities/bea8953b-eda3-4bf3-bef8-1963433dbe4c/f5bd3a80-5470-463f-92a7-da6a179de7fa/v1"
+                }],
+                "placeID": "ChIJ2VVKsE2XuEwRtifAnaZsNXQ",
+                "currency": "CAD",
+                "distance": 1661,
+                "largestUnit": {
+                    "width": 3.05,
+                    "length": 7.62
+                },
+                "infoVerified": false
+            },
+            "discounts": []
+        }],
+        "nbPages": 1,
+        "nbFacilities": 11
+    }]
+}

@@ -1,0 +1,7 @@
+-r base.in
+-r test.in
+
+coverage
+pip-tools
+pre-commit
+setuptools

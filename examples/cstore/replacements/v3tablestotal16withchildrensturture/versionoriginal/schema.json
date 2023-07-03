@@ -1,0 +1,116 @@
+[
+  {
+    "database": "csdatabase",
+    "index": "csdatabase",
+    "nodes": {
+      "table": "Customer",
+      "schema": "public",
+      "columns": [],
+      "children": [
+        {
+          "table": "Booking",
+          "schema": "public",
+          "columns": [],
+          "transform": {
+            "rename": {
+              "moveInDate": "moveInDate",
+              "endDate": "endDate",
+              "regularPrice": "regularPrice"
+            },
+            "mapping": {
+              "moveInDate": {
+                "type": "date"
+              },
+              "endDate": {
+                "type": "date"
+              }
+            }
+          },
+          "relationship": {
+            "variant": "object",
+            "type": "one_to_one"
+          },
+          "children": [
+            {
+              "table": "Unit",
+              "schema": "public",
+              "relationship": {
+                "variant": "object",
+                "type": "one_to_one"
+              },
+              "children": [
+                {
+                  "table": "Address",
+                  "schema": "public",
+                  "relationship": {
+                    "variant": "object",
+                    "type": "one_to_one"
+                  },
+                  "children": [
+                    {
+                      "table": "PostalCode",
+                      "schema": "public",
+                      "relationship": {
+                        "variant": "object",
+                        "type": "one_to_one"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "table": "Facility",
+                  "schema": "public",
+                  "columns": [
+                    "title",
+                    "description",
+                    "website"
+                  ],
+                  "relationship": {
+                    "variant": "scalar",
+                    "type": "one_to_one"
+                  }
+                },
+                {
+                  "table": "FacilityType",
+                  "schema": "public",
+                  "columns": [
+                    "truckRental",
+                    "movers",
+                    "transfer"
+                  ],
+                  "relationship": {
+                    "variant": "scalar",
+                    "type": "one_to_one"
+                  }
+                },
+                {
+                  "table": "Country",
+                  "schema": "public",
+                  "columns": [
+                    "name",
+                    "code",
+                    "measurementSystem"
+                  ],
+                  "relationship": {
+                    "variant": "scalar",
+                    "type": "one_to_one"
+                  }
+                }
+              ]
+            },
+            {
+              "table": "StorageType",
+              "schema": "public",
+              "columns": [],
+              "relationship": {
+                "variant": "object",
+                "type": "one_to_one"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
+

@@ -1,0 +1,228 @@
+[
+  {
+    "database": "airbnb",
+    "index": "airbnb",
+    "nodes": [
+      {
+        "table": "user",
+        "schema": "public",
+        "columns": [],
+        "children": [
+          {
+            "table": "booking",
+            "schema": "public",
+            "columns": [],
+            "transform": {
+              "rename": {
+                "start_date": "from_date",
+                "end_date": "to_date",
+                "price_per_night": "nightly_price"
+              },
+              "mapping": {
+                "from_date": {
+                  "type": "date"
+                },
+                "to_date": {
+                  "type": "date"
+                }
+              }
+            },
+            "relationship": {
+              "variant": "object",
+              "type": "one_to_one"
+            },
+            "children": [
+              {
+                "table": "place",
+                "schema": "public",
+                "relationship": {
+                  "variant": "object",
+                  "type": "one_to_one"
+                },
+                "children": [
+                  {
+                    "table": "city",
+                    "schema": "public",
+                    "relationship": {
+                      "variant": "object",
+                      "type": "one_to_one"
+                    },
+                    "children": [
+                      {
+                        "table": "country",
+                        "schema": "public",
+                        "relationship": {
+                          "variant": "object",
+                          "type": "one_to_one"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "table": "host",
+                    "schema": "public",
+                    "columns": ["email"],
+                    "relationship": {
+                      "variant": "scalar",
+                      "type": "one_to_one"
+                    }
+                  }
+                ]
+              },
+              {
+                "table": "review",
+                "schema": "public",
+                "columns": ["id", "rating", "comment"],
+                "relationship": {
+                  "variant": "object",
+                  "type": "one_to_one"
+                }
+              },
+              {
+                "table": "booking_extra",
+                "schema": "public",
+                "columns": ["id", "description"],
+                "relationship": {
+                  "variant": "object",
+                  "type": "one_to_many"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "table": "table2",
+        "schema": "public",
+        "columns": ["id", "name"],
+        "children": [
+          {
+            "table": "child_table1",
+            "schema": "public",
+            "columns": ["id", "description"],
+            "relationship": {
+              "variant": "object",
+              "type": "one_to_many"
+            }
+          }
+        ]
+      },
+      {
+        "table": "table3",
+        "schema": "public",
+        "columns": ["id", "name"],
+        "children": [
+          {
+            "table": "child_table2",
+            "schema": "public",
+            "columns": ["id", "description"],
+            "relationship": {
+              "variant": "object",
+              "type": "one_to_one"
+            }
+          }
+        ]
+      },
+      {
+        "table": "table4",
+        "schema": "public",
+        "columns": ["id", "name"],
+        "children": [
+          {
+            "table": "child_table3",
+            "schema": "public",
+            "columns": ["id", "description"],
+            "relationship": {
+              "variant": "scalar",
+              "type": "one_to_many"
+            }
+          },
+          {
+            "table": "child_table4",
+            "schema": "public",
+            "columns": ["id", "name"],
+            "relationship": {
+              "variant": "scalar",
+              "type": "one_to_many"
+            }
+          }
+        ]
+      },
+      {
+        "table": "table5",
+        "schema": "public",
+        "columns": ["id", "name"],
+        "children": [
+          {
+            "table": "child_table5",
+            "schema": "public",
+            "columns": ["id", "description"],
+            "relationship": {
+              "variant": "scalar",
+              "type": "one_to_one"
+            }
+          },
+          {
+            "table": "child_table6",
+            "schema": "public",
+            "columns": ["id", "name"],
+            "relationship": {
+              "variant": "scalar",
+              "type": "one_to_many"
+            }
+          }
+        ]
+      },
+      {
+        "table": "table6",
+        "schema": "public",
+        "columns": ["id", "name"],
+        "children": [
+          {
+            "table": "child_table7",
+            "schema": "public",
+            "columns": ["id", "description"],
+            "relationship": {
+              "variant": "object",
+              "type": "one_to_one"
+            }
+          },
+          {
+            "table": "child_table8",
+            "schema": "public",
+            "columns": ["id", "name"],
+            "relationship": {
+              "variant": "object",
+              "type": "one_to_many"
+            }
+          }
+        ]
+      },
+      {
+        "table": "table7",
+        "schema": "public",
+        "columns": ["id", "name"],
+        "children": [
+          {
+            "table": "child_table9",
+            "schema": "public",
+            "columns": ["id", "description"],
+            "relationship": {
+              "variant": "scalar",
+              "type": "one_to_one"
+            }
+          },
+          {
+            "table": "child_table10",
+            "schema": "public",
+            "columns": ["id", "name"],
+            "relationship": {
+              "variant": "scalar",
+              "type": "one_to_many"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

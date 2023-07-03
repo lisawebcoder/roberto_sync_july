@@ -1,0 +1,78 @@
+[
+  {
+    "database": "csdatabase",
+    "index": "csdatabase",
+    "nodes": [
+      {
+        "table": "Unit",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "FacilityType",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "Facility",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "Address",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "PostalCode",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "City",
+        "schema": "public",
+        "columns": []
+      },      
+      {
+        "table": "Country",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "Currency",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "FacilityImage",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "Image",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "StorageType",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "UnitDiscount",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "Discount",
+        "schema": "public",
+        "columns": []
+      },
+      {
+        "table": "FacilityDiscount",
+        "schema": "public",
+        "columns": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,45 @@
+[
+    {
+        "database": "csdatabase",
+        "index": "csdatabase",
+        "nodes": {
+            "table": "Unit",
+            "schema": "public",
+            "columns": [
+            ],
+            "children": [
+                {
+                    "table": "FacilityType",
+                    "schema": "public",
+                    "columns": [
+                    ],                    
+                    "relationship": {
+                        "variant": "object",
+                        "type": "one_to_one",
+                        "foreign_key": {
+                            "child": ["facilityTypeID"],
+                            "parent": ["facilityTypeID"]
+                        }
+                    },
+                    "children":[
+                        {
+                            "table": "Facility",
+                            "schema": "public",
+                            "relationship": {
+                                "variant": "object",
+                                "type": "one_to_one",
+                        "foreign_key": {
+                            "child": ["facilityID"],
+                            "parent": ["facilityID"]
+                                }
+                            }
+                            
+                         }
+                        
+						
+                    ]
+                }
+            ]
+        }
+    }
+]

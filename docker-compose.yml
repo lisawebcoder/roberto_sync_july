@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: bitnami/postgresql:15.1.0
+    ports:
+      - "15432:5432"
+    environment:
+      - POSTGRESQL_USER=postgres
+      - POSTGRESQL_PASSWORD=hello
+      - POSTGRESQL_DATABASE=csdatabase
+      #- POSTGRESQL_EXTRA_FLAGS=--wal_level=logical
+    volumes:
+      - pg_0_vol:/bitnami/postgresql   
+    #volumes:
+      #- ./pgdata:/bitnami/postgresql
+    #command: ["chmod", "-R", "777", "/bitnami/postgresql/data"]
+    #privileged: true
+
+  redis:
+    image: redis
+    command: redis-server #--requirepass hello
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.9
+    ports:
+      - "9201:9200"
+      - "9301:9300"
+    environment:
+      - xpack.security.enabled=false
+      - network.host=127.0.0.1
+      - http.host=0.0.0.0
+    volumes:
+      - ./elasticsearchdata:/usr/share/elasticsearch/data
+
+  pgsync:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ./runserver.sh
+    sysctls:
+      - net.ipv4.tcp_keepalive_time=200
+      - net.ipv4.tcp_keepalive_intvl=200
+      - net.ipv4.tcp_keepalive_probes=5
+    labels:
+      org.label-schema.name: "pgsync"
+      org.label-schema.description: "Postgres to Elasticsearch sync"
+      com.label-schema.service-type: "daemon"
+    depends_on:
+      - postgres
+      - redis
+      - elasticsearch
+    environment:
+      - PG_USER=postgres
+      - PG_HOST=postgres
+      - PG_PORT_NUMBER=5432
+      - PG_PASSWORD=hello
+      - PG_DATABASE=csdatabase
+      - LOG_LEVEL=INFO
+      - ELASTICSEARCH_PORT=9200
+      - ELASTICSEARCH_SCHEME=http
+      - ELASTICSEARCH_HOST=elasticsearch
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      #- REDIS_PASSWORD=hello
+      - ELASTICSEARCH=true
+      - OPENSEARCH=false
+    volumes:
+      - ./pgsyncdata:/app/data
+
+  kibana:
+    image: 'docker.elastic.co/kibana/kibana:7.13.4'
+    restart: always
+    depends_on:
+      - elasticsearch
+    ports:
+      - '5601:5601'
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+#this goes at the bottom from modified databse container code above
+volumes:
+  pg_0_vol:
+    driver: local 

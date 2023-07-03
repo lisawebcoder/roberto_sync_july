@@ -1,0 +1,201 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome6",
+    "definitions": {
+        "Welcome6": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "primary": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Primary"
+                    }
+                },
+                "nbPages": {
+                    "type": "integer"
+                },
+                "nbFacilities": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "nbFacilities",
+                "nbPages",
+                "primary"
+            ],
+            "title": "Welcome6"
+        },
+        "Primary": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "unit": {
+                    "$ref": "#/definitions/Unit"
+                },
+                "facility": {
+                    "$ref": "#/definitions/Facility"
+                },
+                "discounts": {
+                    "type": "array"
+                    
+                }
+            },
+            "required": [
+                "discounts",
+                "facility",
+                "id",
+                "unit"
+            ],
+            "title": "Primary"
+        },
+        "Facility": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "images": {
+                    "type": "array"
+                    
+                },
+                "placeID": {
+                    "type": "string"
+                },
+                "currency": {
+                    "$ref": "#/definitions/Currency"
+                },
+                "distance": {
+                    "type": "integer"
+                },
+                "largestUnit": {
+                    "$ref": "#/definitions/LargestUnit"
+                },
+                "infoVerified": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "currency",
+                "distance",
+                "images",
+                "infoVerified",
+                "largestUnit",
+                "placeID",
+                "title"
+            ],
+            "title": "Facility"
+        },
+        "Image": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "key": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "key"
+            ],
+            "title": "Image"
+        },
+        "LargestUnit": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "width": {
+                    "type": "number"
+                },
+                "length": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "length",
+                "width"
+            ],
+            "title": "LargestUnit"
+        },
+        "Unit": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "width": {
+                    "type": "number"
+                },
+                "length": {
+                    "type": "number"
+                },
+                "vehicles": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "storageType": {
+                    "$ref": "#/definitions/StorageType"
+                },
+                "regularPrice": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "specifications": {
+                    "type": "array"                    
+                },
+                "discountedPrice": {
+                    "type": "null"
+                },
+                "possiblyVehicle": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "discountedPrice",
+                "id",
+                "length",
+                "possiblyVehicle",
+                "regularPrice",
+                "specifications",
+                "storageType",
+                "vehicles",
+                "width"
+            ],
+            "title": "Unit"
+        },
+        "Currency": {
+            "type": "string",
+            "enum": [
+                "CAD"
+            ],
+            "title": "Currency"
+        },
+        "StorageType": {
+            "type": "string",
+            "enum": [
+                "selfStorage",
+                "parking"
+            ],
+            "title": "StorageType"
+        }
+    }
+}

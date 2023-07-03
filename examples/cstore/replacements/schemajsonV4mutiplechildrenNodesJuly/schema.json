@@ -1,0 +1,27 @@
+[
+    {
+        "database": "csdatabasejuly",
+        "index": "july",
+        "nodes": {
+            "table": "BookingReason",
+            "columns": [                
+                "description"
+            ],
+            "children": [
+                {
+                    "table": "MaskedPhoneNumber",
+                    "columns": [
+                        "formattedPhoneNumber"
+                    ]
+                },
+                {
+                    "table": "SizeCategory",
+                    "columns": [
+                        "description",
+                        "sizeCategoryID"
+                    ]
+                }
+            ]
+        }
+    }
+]
