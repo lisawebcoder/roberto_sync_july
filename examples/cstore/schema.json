@@ -1,71 +1,95 @@
 [
-    {
-        "database": "csdatabase",
-        "index": "csdatabase",
-        "nodes": {
-            "table": "Unit",
-            "schema": "public",
-            "columns": [
-            ],
-            "children": [
+  {
+    "database": "csdatabase",
+    "index": "csdatabase",
+    "nodes": {
+      "table": "Unit",
+      "schema": "public",
+      "columns": [
+        "covered",
+        "carAccess",
+        "heating",
+        "heatedFloor",
+        "airConditioning",
+        "noStairs",
+        "electronicKey",
+        "h24",
+        "electricity",
+        "width",
+        "length",
+        "floorNb",
+        "narrowestPassage",
+        "motorcycle",
+        "car",
+        "rv",
+        "boat",
+        "facilityTypeID",
+        "accessCode",
+        "possiblyVehicle",
+        "outdoor",
+        "snowmobile",
+        "trailer",
+        "discountedPrice",
+        "regularPrice",
+        "rentalDeposit"
+      ],
+      "children": [
+        {
+          "table": "FacilityType",
+          "schema": "public",
+          "columns": [],
+          "relationship": {
+            "variant": "object",
+            "type": "one_to_one",
+            "foreign_key": {
+              "child": ["facilityTypeID"],
+              "parent": ["facilityTypeID"]
+            }
+          },
+          "children": [
+            {
+              "table": "Facility",
+              "schema": "public",
+              "relationship": {
+                "variant": "object",
+                "type": "one_to_one",
+                "foreign_key": {
+                  "child": ["facilityID"],
+                  "parent": ["facilityID"]
+                }
+              },
+              "children": [
                 {
-                    "table": "FacilityType",
-                    "schema": "public",
-                    "columns": [
-                    ],                    
-                    "relationship": {
+                  "table": "Address",
+                  "schema": "public",
+                  "relationship": {
+                    "variant": "object",
+                    "type": "one_to_one",
+                    "foreign_key": {
+                      "child": ["addressID"],
+                      "parent": ["addressID"]
+                    }
+                  },
+                  "children": [
+                    {
+                      "table": "PostalCode",
+                      "schema": "public",
+                      "relationship": {
                         "variant": "object",
                         "type": "one_to_one",
                         "foreign_key": {
-                            "child": ["facilityTypeID"],
-                            "parent": ["facilityTypeID"]
+                          "child": ["postalCodeID"],
+                          "parent": ["postalCodeID"]
                         }
-                    },
-                    "children":[
-                        {
-                            "table": "Facility",
-                            "schema": "public",
-                            "relationship": {
-                                "variant": "object",
-                                "type": "one_to_one",
-                        "foreign_key": {
-                            "child": ["facilityID"],
-                            "parent": ["facilityID"]
-                                }
-                            },
-                            "children": [
-                                {
-                                    "table": "Address",
-                                    "schema": "public",
-                                    "relationship": {
-                                        "variant": "object",
-                                        "type": "one_to_one",
-									"foreign_key": {
-										"child": ["addressID"],
-										"parent": ["addressID"]
-											}
-                                    },
-                                    "children": [
-                                        {
-                                            "table": "PostalCode",
-                                            "schema": "public",
-                                            "relationship": {
-                                                "variant": "object",
-                                                "type": "one_to_one",
-										"foreign_key": {
-											"child": ["postalCodeID"],
-											"parent": ["postalCodeID"]
-												}
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                         }                      
-						
-                    ]
+                      }
+                    }
+                  ]
                 }
-            ]
+              ]
+            }
+          ]
         }
+      ]
     }
+  }
 ]
